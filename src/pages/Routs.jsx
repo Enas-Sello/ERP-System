@@ -10,7 +10,7 @@ import لوحة_التحكم from './لوحة_التحكم';
 import { Container } from 'react-bootstrap';
 import { Routes, Route } from 'react-router-dom';
 
-const Main = () => {
+const Routs = () => {
   return (
     <Container>
       <Routes>
@@ -26,4 +26,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Routs;
