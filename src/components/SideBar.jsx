@@ -17,7 +17,7 @@ const SideBar = () => {
     <div className="d-flex h-full text-white  ps-4">
       <Sidebar
         transitionDuration={'300'}
-        style={{ height: '100vh', color: 'white', overflowY: 'hidden' }}
+        style={{ height: '100vh', color: 'white', }}
         backgroundColor={'#343a40'}
       >
         <Menu className="p-3 ">

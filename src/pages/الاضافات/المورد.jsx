@@ -1,13 +1,22 @@
-import React from 'react';
-import { Container, Row ,Button} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Button, Col } from 'react-bootstrap';
 import AddNew from '../../components/AddNew';
 import Tables from '../../components/Tables';
 // icons
 import { SlOptionsVertical } from 'react-icons/sl';
 import { BiFilterAlt } from 'react-icons/bi';
+import { BiSearchAlt } from 'react-icons/bi';
+
+// data
+import { Suplierheader, SuplierRows } from '../../data.js';
+import Card from 'react-bootstrap/Card';
+
 const المورد = () => {
+  const [serach, setSearch] = useState(false);
+  console.log(serach);
+
   return (
-    <Container>
+    <Container fluid>
       <Row>
         <h2>المورد</h2>
         <Row>
@@ -17,7 +26,12 @@ const المورد = () => {
               <Button variant="outline-light" size="sm" className="buttonColor">
                 20
               </Button>
-              <Button variant="outline-light" size="sm" className="bgColor">
+              <Button
+                variant="outline-light"
+                size="sm"
+                className="bgColor"
+                onClick={() => setSearch(!serach)}
+              >
                 <BiFilterAlt />
                 بحث
               </Button>
@@ -34,7 +48,40 @@ const المورد = () => {
           </div>
         </Row>
       </Row>
-      <Tables />
+      <div className="d-flex gap-4">
+        <Col lg={3} className={serach ? 'd-block my-2' : 'd-none'}>
+          <Card style={{ width: '18rem' }}>
+            <Card.Body>
+              <Card.Title>FILTER OPTIONS</Card.Title>
+                <div className="d-flex gap-2 p-1  justify-content-center align-items-center rounded-pill bg-secondary bg-opacity-25">
+                  <BiSearchAlt />
+                  <input
+                    className="border border-0  bg-transparent outine-light"
+                    type="text"
+                    placeholder="بحث"
+                  />
+                </div>
+              <Card.Text>
+
+                <p>تغيير :</p>
+                <select
+                  className="form-select form-select-sm"
+                  aria-label="Default select example"
+                >
+                  <option selected>--------------</option>
+                  <option value="1">إظهار</option>
+                  <option value="2">عدم إظهار</option>
+                  <option value="3">وسيط</option>
+                </select>
+              </Card.Text>
+              {/* <Button variant="primary">Go somewhere</Button> */}
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col lg={serach ? 9 : 12}>
+          <Tables SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
+        </Col>
+      </div>
     </Container>
   );
 };
