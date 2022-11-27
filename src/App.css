@@ -1,6 +1,39 @@
-.textColor{
-    color: rgb(188, 141, 55) !important ;
+body {
+  overflow-y: hidden;
 }
-.bgColor{
-    background-color: #343a40 !important;
+/* global */
+.textColor {
+  color: rgb(188, 141, 55) !important ;
 }
+.bgColor {
+  background-color: #343a40 !important;
+}
+.buttonColor {
+ background-color: rgb(188, 141, 55) !important ;
+outline: none;
+}
+.borderRadius {
+  border-radius: 14px;
+}
+/*end global */
+
+
+/* sideBar */
+.menu-item .active a {
+  background-color: #4f555a !important;
+  color: rgb(188, 141, 55) !important ;
+}
+.menu-item a:hover {
+  color: rgb(188, 141, 55) !important ;
+}
+/* sideBar */
+/* navebars */
+.images {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  object-fit: fill;
+}
+.badge {
+    --bs-badge-padding-x: 0.30em !important;}
+/*end navebars */
