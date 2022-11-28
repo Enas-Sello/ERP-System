@@ -1,37 +1,73 @@
 /* global */
+
+:root {
+  --mainColor: #468690;
+  --lightYello: #f4bc4b;
+  --darkGray: #343a40;
+  --lightGray: #eaecec;
+  --darkYellow: #927054;
+}
+
+* {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 15px;
+}
+button:hover {
+  color: rgb(82, 80, 80) !important;
+}
+.logoColor {
+  color: var(--mainColor) !important;
+}
+
 .textColor {
-  color: rgb(188, 141, 55) !important ;
+  color: var(--lightYello) !important ;
+}
+.textDarkyellow{
+  color: var(--darkYellow) !important ;
+
+}
+.sectextColor {
+  color: var(--darkGray) !important ;
 }
 .bgColor {
-  background-color: #343a40 !important;
+  background-color: var(--darkGray) !important;
+}
+.secbgColor {
+  background-color: var(--lightGray) !important;
 }
 .buttonColor {
-  background-color: rgb(188, 141, 55) !important ;
+  background-color: var(--darkYellow) !important;
   outline: none;
+}
+.secButtonColor {
+  background-color: var(--mainColor) !important;
 }
 .borderRadius {
-  border-radius: 14px;
+  border-radius: 14px !important ;
 }
 input {
-  outline: none;
+  outline: none !important ;
+}
+input:focus {
+  outline: var(--mainColor) !important;
 }
 /*end global */
 
 /* sideBar */
 .menu-item .active a {
   background-color: #4f555a !important;
-  color: rgb(188, 141, 55) !important ;
+  color: var(--lightYello) !important ;
 }
 .menu-item a:hover {
-  color: rgb(188, 141, 55) !important ;
+  color: var(--lightYello) !important ;
 }
 /* sideBar */
 /* navebars */
 .images {
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  object-fit: fill;
+  width: 1.8rem !important ;
+  height: 1.8rem !important ;
+  border-radius: 50% !important ;
+  object-fit: fill !important ;
 }
 .badge {
   --bs-badge-padding-x: 0.3em !important;
@@ -39,9 +75,10 @@ input {
 /*end navebars */
 
 /* .offcanvas */
-.offcanvas.offcanvas-start {width: 50% !important;}
+.offcanvas.offcanvas-start {
+  width: 50% !important;
+}
 .offcanvas-header {
   display: block !important;
   padding: 0 !important;
-
 }

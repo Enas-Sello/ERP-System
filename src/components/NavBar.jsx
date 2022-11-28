@@ -12,7 +12,7 @@ function NavBar() {
   return (
     <Navbar bg="light" expand="md">
       <Container fluid>
-        <Navbar.Brand href="/" className="fs-2 fw-bolder text-info ms-5 ">
+        <Navbar.Brand href="/" className="fs-2 fw-bolder logoColor ms-5 ">
           Altebr
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -21,10 +21,10 @@ function NavBar() {
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2 ms-2 bg-transparent"
+              className="me-2 ms-2 secbgColor"
               aria-label="Search"
             />
-            <Button variant="outline-dark">
+            <Button variant="outline-light secbgColor sectextColor">
               <BiSearchAlt />
             </Button>
           </Form>

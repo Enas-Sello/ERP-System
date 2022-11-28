@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 import SideBar from './components/SideBar';
 import Routs from './pages/Routs';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/*" element={<Routs />} />
         </Routes>
       </main>
+      <Footer/>
     </Container>
   );
 }

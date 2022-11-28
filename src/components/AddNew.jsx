@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { IoAddOutline } from 'react-icons/io5';
@@ -15,15 +14,15 @@ const AddNew = () => {
     <>
       <Button
         variant="outline-light"
-        className=" bg-info bg-opacity-75"
+        className=" secButtonColor "
         size="sm"
         onClick={handleShow}
       >
-        <IoAddOutline />
+        <IoAddOutline className="text-light" />
         إضافة مورد
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose} className="bg-secondary ">
+      <Offcanvas show={show} onHide={handleClose} className="secbgColor ">
         <Offcanvas.Header>
           <Offcanvas.Title className="bg-light p-2">
             <div
@@ -36,12 +35,12 @@ const AddNew = () => {
                 <Button variant="danger">العودة</Button>{' '}
                 <Button variant="success">حفظ </Button>{' '}
               </div>
-              <p className="fs-2 fw-bolder text-info ms-5 ">Altebr</p>
+              <p className="fs-2 fw-bolder logoColor ms-5 ">Altebr</p>
             </div>
           </Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body  closeButton>
-         <AddNewForm/>
+        <Offcanvas.Body>
+          <AddNewForm />
         </Offcanvas.Body>
       </Offcanvas>
     </>

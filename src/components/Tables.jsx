@@ -9,7 +9,10 @@ function Tables({ Suplierheader, SuplierRows }) {
     <div style={{ width: '100%' }}>
       <Table className="my-4 rounded">
         <thead>
-          <tr className="bg-info rounded my-4 text-center ">
+          <tr
+            style={{ backgroundColor: '#46869040' }}
+            className=" rounded my-4 text-center fw-bold"
+          >
             {Suplierheader.map((th) => (
               <th key={th.id} className="text- center">
                 {th.header}
@@ -34,17 +37,17 @@ function Tables({ Suplierheader, SuplierRows }) {
               <td>{td.td4}</td>
               <td>{td.td5}</td>
               <td>
-                
                 <div
                   className="d-flex gap-3 justify-content-center align-items-center "
                   style={{ width: '100%' }}
                 >
                   <CiEdit
-                    className="border border-info text-info"
+                    className=" logoColor"
                     style={{
                       width: '20px',
                       height: '20px',
                       cursor: 'pointer',
+                      border: '#468690 1px solid',
                     }}
                   />
                   <RiDeleteBin5Line

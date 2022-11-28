@@ -30,7 +30,7 @@ import صور from './الموردين/صور';
 // لوحة التحكم
 const Routs = () => {
   return (
-    <Container>
+    <Container className="secbgColor">
       <Routes>
         {/* الاضافات */}
         <Route path="/البلد" element={<البلد />} />

@@ -1,12 +1,28 @@
 import Pagination from 'react-bootstrap/Pagination';
+import { Link } from 'react-router-dom';
 
 function AdvancedExample() {
   return (
-    <Pagination>
-      <Pagination.Prev />
-      <Pagination.Item active>{1}</Pagination.Item>
-      <Pagination.Next />
-    </Pagination>
+    <nav aria-label="Page navigation example ">
+      <ul className="pagination ">
+        <li className="page-item ">
+          <Link className="page-link sectextColor border-0" href="#">
+            معاينة
+          </Link>
+        </li>
+        <li className="page-item ">
+          <Link className="page-link secButtonColor text-white rounded" href="#">
+            1
+          </Link>
+        </li>
+
+        <li className="page-item">
+          <Link className="page-link sectextColor border-0" href="#">
+            التالي
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
