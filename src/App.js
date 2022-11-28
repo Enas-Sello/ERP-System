@@ -9,15 +9,15 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Container fluid style={{margin:'0', padding:'0'}}>
+    <Container fluid style={{ margin: '0', padding: '0' }}>
       <NavBar />
-      <main className="d-flex">
+      <main className="d-flex " style={{ height: '100vh' }}>
         <SideBar />
         <Routes>
           <Route path="/*" element={<Routs />} />
         </Routes>
       </main>
-      <Footer/>
+      <Footer />
     </Container>
   );
 }

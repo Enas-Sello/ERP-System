@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Row } from 'react-bootstrap';
+import {  Container } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import holder from '../../assets/holder.png';
 const صور = () => {
@@ -89,39 +89,36 @@ const صور = () => {
           Filter options relating to pictures shown will be displayed here
         </p>
         <div className="container">
-          <div className="d-flex gap-2 flex-wrap">
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+          <div
+            className="d-flex  flex-wrap w-100 "
+            style={{ columnGap: '5px', rowGap: '20px' }}
+          >
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
-            </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
-            </div>
-            <div className="col">
-              <img src={holder} width={'180px'} alt="" />
+            <div className="col p-0">
+              <img src={holder} width={'250px'} alt="" />
             </div>
           </div>
         </div>

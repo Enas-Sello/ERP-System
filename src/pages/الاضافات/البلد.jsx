@@ -3,7 +3,7 @@ import { Button, Container } from 'react-bootstrap';
 
 const البلد = () => {
   return (
-    <Container className="my-3">
+    <Container className="my-3 ">
       <div className="d-flex justify-content-between flex-column mb-4">
         <div className="d-flex  justify-content-between ">
           <p className="fs-5 fw-bold">بداية مدة و زيادة رصيد</p>
@@ -45,7 +45,8 @@ const البلد = () => {
         </div>
       </div>
       <div className="d-flex">
-        <div className="bg-white rounded  mx-4 p-2">
+        {/* form */}
+        <div className="bg-white rounded  mx-4 p-2 mb-3">
           <div className="d-flex gap-5 align-items-center">
             <p className="logoColor fs-5 fw-bold ">رقم السند</p>
             <p className="textDarkyellow fs-6 fw-bold ">325654615</p>
@@ -186,7 +187,10 @@ const البلد = () => {
             </div>
           </form>
         </div>
-        <div className="bg-white rounded p-2">
+        {/*end form */}
+
+        {/* form 2*/}
+        <div className="bg-white rounded p-2 mb-3">
           <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
           <form className="row g-4 mb-5 ">
             <div className="col-4">

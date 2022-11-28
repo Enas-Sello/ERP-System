@@ -1,4 +1,3 @@
-import Pagination from 'react-bootstrap/Pagination';
 import { Link } from 'react-router-dom';
 
 function AdvancedExample() {
@@ -6,18 +5,27 @@ function AdvancedExample() {
     <nav aria-label="Page navigation example ">
       <ul className="pagination ">
         <li className="page-item ">
-          <Link className="page-link sectextColor border-0" href="#">
+          <Link
+            className="page-link sectextColor border-0 bg-transparent"
+            href="#"
+          >
             معاينة
           </Link>
         </li>
         <li className="page-item ">
-          <Link className="page-link secButtonColor text-white rounded" href="#">
+          <Link
+            className="page-link secButtonColor text-white rounded"
+            href="#"
+          >
             1
           </Link>
         </li>
 
         <li className="page-item">
-          <Link className="page-link sectextColor border-0" href="#">
+          <Link
+            className="page-link sectextColor border-0 bg-transparent"
+            href="#"
+          >
             التالي
           </Link>
         </li>

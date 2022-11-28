@@ -15,9 +15,9 @@ const المورد = () => {
   console.log(serach);
 
   return (
-    <Container >
+    <Container className="mt-3">
       <Row>
-        <p className='fs-5 fw-bold'>المورد</p>
+        <p className="fs-5 fw-bold">المورد</p>
         <Row>
           <div className="d-flex flex-sm-column flex-lg-row justify-content-between">
             <div className="d-flex gap-2">
@@ -36,14 +36,14 @@ const المورد = () => {
               </Button>
             </div>
             <div className="d-flex gap-2">
-              <span className="textColor fs-4 fw-bold">3</span>
+              <span className="textDarkyellow fs-4 fw-bold">3</span>
               <h4>مجموع مختارين</h4>
               <Button
                 variant="outline-light"
                 size="sm"
                 className="secButtonColor"
               >
-                <SlOptionsVertical/>
+                <SlOptionsVertical />
               </Button>
 
               <AddNew />
@@ -53,7 +53,7 @@ const المورد = () => {
       </Row>
       <div className="d-flex gap-4">
         <Col lg={3} className={serach ? 'd-block my-2' : 'd-none'}>
-          <FilterCard/>
+          <FilterCard />
         </Col>
         <Col lg={serach ? 9 : 12}>
           <Tables SuplierRows={SuplierRows} Suplierheader={Suplierheader} />

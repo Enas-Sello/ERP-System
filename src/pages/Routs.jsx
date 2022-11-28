@@ -30,29 +30,29 @@ import صور from './الموردين/صور';
 // لوحة التحكم
 const Routs = () => {
   return (
-    <Container className="secbgColor">
+    <Container className="secbgColor" >
       <Routes>
         {/* الاضافات */}
-        <Route path="/البلد" element={<البلد />} />
-        <Route path="/المدينة" element={<المدينة />} />
+        <Route path="/بلد المنتج" element={<البلد />} />
+        <Route path="/مدينة" element={<المدينة />} />
         <Route path="/سوق" element={<سوق />} />
         <Route path="/جنسيه" element={<جنسيه />} />
         <Route path="/المورد" element={<المورد />} />
         <Route path="/موظفين" element={<موظفين />} />
         <Route path="/بنك" element={<بنك />} />
-        <Route path="/الوان_الذهب" element={<الوان_الذهب />} />
-        <Route path="/اصناف_الذهب" element={<اصناف_الذهب />} />
-        <Route path="/قطع_الاحجار" element={<قطع_الاحجار />} />
-        <Route path="/الوان_الاحجار" element={<الوان_الاحجار />} />
-        <Route path="/اسماء_الاحجار" element={<اسماء_الاحجار />} />
+        <Route path="/الوان الذهب" element={<الوان_الذهب />} />
+        <Route path="/اصناف الذهب" element={<اصناف_الذهب />} />
+        <Route path="/قطع الاحجار" element={<قطع_الاحجار />} />
+        <Route path="/الوان الاحجار" element={<الوان_الاحجار />} />
+        <Route path="/اسماء الاحجار" element={<اسماء_الاحجار />} />
         {/* الادارة */}
         {/* الفروع */}
         {/* الموردين */}
-        <Route path="/بداية_المدة" element={<بداية_المدة />} />
+        <Route path="/بداية المدة" element={<بداية_المدة />} />
         <Route path="/توريد" element={<توريد />} />
-        <Route path="/زيادات_رأسمالية" element={<زيادات_رأسمالية />} />
+        <Route path="/زيادات رأسمالية" element={<زيادات_رأسمالية />} />
         <Route path="/سداد" element={<سداد />} />
-        <Route path="/مردود_توريد" element={<مردود_توريد />} />
+        <Route path="/مردود توريد" element={<مردود_توريد />} />
         <Route path="/خصم" element={<خصم />} />
         <Route path="/صور" element={<صور />} />
         {/* التجزئة */}

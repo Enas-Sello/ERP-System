@@ -11,9 +11,11 @@
 * {
   font-family: 'Tajawal', sans-serif;
   font-size: 15px;
+  	transition-duration: 100ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 button:hover {
-  color: rgb(82, 80, 80) !important;
+  color: var(--lightYello) !important;
 }
 .logoColor {
   color: var(--mainColor) !important;

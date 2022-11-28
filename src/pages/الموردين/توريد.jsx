@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 
 const توريد = () => {
-     return (
+  return (
     <Container className="my-3">
       <div className="d-flex justify-content-between mb-4">
         <div className="d-flex ">
