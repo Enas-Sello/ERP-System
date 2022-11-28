@@ -3,9 +3,15 @@ import { Button, Container, Dropdown } from 'react-bootstrap';
 import Calendars from '../../components/Calendar';
 import { BsCalendarEvent } from 'react-icons/bs';
 import { IoAddOutline } from 'react-icons/io5';
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import {
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+} from 'react-icons/md';
+import PopUp from '../../components/PopUp';
 const زيادات_رأسمالية = () => {
-  const [calender, setCalender] = useState(false);
+  const [ calender, setCalender ] = useState( false );
+    const [modalShow, setModalShow] = useState(false);
+
   return (
     <Container className="my-3">
       <div className="d-flex justify-content-between mb-4">
@@ -13,9 +19,32 @@ const زيادات_رأسمالية = () => {
           <p className="fs-5 fw-bold">إضافة سند التوريد</p>
         </div>
         <div className="d-flex text-start">
-          <Button className=" border bg-success border-0 ms-2 ">حفظ</Button>
-
-          <Button className="border border-0 bg-danger ms-2">العودة</Button>
+          <Button
+            className=" border bg-success border-0 ms-2 "
+            onClick={() => setModalShow(true)}
+          >
+            حفظ
+          </Button>
+          <PopUp
+            color={'warning'}
+            text={'لا يمكن اعتماد فرق اسهم اكثر من خسين  سهم'}
+            Button={false}
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
+          <Button
+            className="border border-0 bg-danger ms-2"
+            onClick={() => setModalShow(true)}
+          >
+            العودة
+          </Button>
+          <PopUp
+            color={'danger'}
+            text={' سيتم الان اغلاق السند '}
+            Button={true}
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </div>
       </div>
       <div className="d-flex">
@@ -377,13 +406,10 @@ const زيادات_رأسمالية = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button
-                  className="border border-0 buttonColor ms-2  "
-                  style={{ padding: '.45rem .75rem' }}
-                >
-                  <div className="d-flex">
+                <Button className="border border-0 buttonColor ms-2  ">
+                  <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowDown />
+                    <MdOutlineKeyboardArrowUp />
                   </div>
                 </Button>
               </div>
@@ -392,12 +418,20 @@ const زيادات_رأسمالية = () => {
               <label for="staticEmail2" className="form-label">
                 عدد الالماس{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  className="form-control secbgColor "
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button className="border border-0 buttonColor ms-2  ">
+                  <div className="d-flex align-items-center gap-2 p-1 ">
+                    <MdOutlineKeyboardArrowDown />
+                    <MdOutlineKeyboardArrowUp />
+                  </div>
+                </Button>
+              </div>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -414,23 +448,39 @@ const زيادات_رأسمالية = () => {
               <label for="staticEmail2" className="form-label">
                 ضريبة قيمة الالماس{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  className="form-control secbgColor "
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button className="border border-0 buttonColor ms-2  ">
+                  <div className="d-flex align-items-center gap-2 p-1 ">
+                    <MdOutlineKeyboardArrowDown />
+                    <MdOutlineKeyboardArrowUp />
+                  </div>
+                </Button>
+              </div>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 وزن حجر الالماس{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  className="form-control secbgColor "
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button className="border border-0 buttonColor ms-2  ">
+                  <div className="d-flex align-items-center gap-2 p-1 ">
+                    <MdOutlineKeyboardArrowDown />
+                    <MdOutlineKeyboardArrowUp />
+                  </div>
+                </Button>
+              </div>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
