@@ -17,11 +17,20 @@ const SideBar = () => {
     <div className="d-flex  text-white">
       <Sidebar
         transitionDuration={'300'}
-        style={{  color: 'white' }}
+        style={{ color: 'white' }}
         backgroundColor={'#343a40'}
       >
-        <Menu className="p-3 ">
-          <h2 className="fs-4 fw-semibold">القائمة الرئيسيه</h2>
+        <Menu className="p-3 position-relative">
+          <button
+            
+            className="position-absolute border border-0 text-white bgColor top-0 end-0"
+            onClick={() => collapseSidebar()}
+          >
+            <AiOutlineMenuUnfold />
+          </button>
+          <MenuItem className="">
+            <h2 className="fs-5 fw-bold">القائمة الرئيسيه</h2>
+          </MenuItem>
           {/* // الايضافات */}
           <SubMenu
             className="textColor fw-bold"
@@ -53,7 +62,6 @@ const SideBar = () => {
               <h6>جنسيه </h6>
             </MenuItem>
             <MenuItem
-              active={true}
               className="text-white bgColor fw-bold"
               routerLink={<Link to="/المورد" />}
             >
