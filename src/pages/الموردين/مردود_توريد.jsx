@@ -1,21 +1,49 @@
-import React from 'react';
-import { Button, Container } from 'react-bootstrap';
-
+import React, { useState } from 'react';
+import { Button, Container, Dropdown } from 'react-bootstrap';
+import Calendars from '../../components/Calendar';
+import { BsCalendarEvent } from 'react-icons/bs';
+import { IoAddOutline } from 'react-icons/io5';
+import {
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+} from 'react-icons/md';
+import PopUp from '../../components/PopUp';
 const مردود_توريد = () => {
+  const [calender, setCalender] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
   return (
     <Container className="my-3">
-      <div className="d-flex justify-content-between flex-column mb-4">
-        <div className="d-flex  justify-content-between ">
-          <p className="fs-5 fw-bold">بداية مدة و زيادة رصيد</p>
-          <div className="d-flex text-start">
-            <Button className="buttonColor border border-0 ms-2 ">
-              القيود
-            </Button>
-            <Button className="secButtonColor border border-0 ms-2">
-              طباعة
-            </Button>{' '}
-            <Button className="border border-0 bg-danger ms-2">العودة</Button>
-          </div>
+      <div className="d-flex justify-content-between mb-4">
+        <div className="d-flex ">
+          <p className="fs-5 fw-bold">إضافة سند التوريد</p>
+        </div>
+        <div className="d-flex text-start">
+          <Button
+            className=" border bg-success border-0 ms-2 "
+            onClick={() => setModalShow(true)}
+          >
+            حفظ
+          </Button>
+          <PopUp
+            color={'warning'}
+            text={'لا يمكن اعتماد فرق اسهم اكثر من خسين  سهم'}
+            Button={false}
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
+          <Button
+            className="border border-0 bg-danger ms-2"
+            onClick={() => setModalShow(true)}
+          >
+            العودة
+          </Button>
+          <PopUp
+            color={'danger'}
+            text={' سيتم الان اغلاق السند '}
+            Button={true}
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </div>
       </div>
       <div className="d-flex">
@@ -25,7 +53,7 @@ const مردود_توريد = () => {
             <p className="logoColor fs-5 fw-bold ">رقم السند</p>
             <p className="textDarkyellow fs-6 fw-bold ">325654615</p>
           </div>
-          <form className="row g-3 mb-5">
+          <form className="row g-2 mb-5">
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
                 إسم المستخدم{' '}
@@ -37,28 +65,54 @@ const مردود_توريد = () => {
                 value=""
               />
             </div>
-            <div className="col-6">
+            <div className="col-6 position-relative">
               <label for="staticEmail2" className="form-label">
                 تاريخ التسجيل{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex secbgColor border border-2 rounded align-items-center ">
+                <input
+                  type="text"
+                  className="form-control bg-transparent border-0 "
+                  id="staticEmail2"
+                  value=""
+                />
+                <BsCalendarEvent
+                  className="ms-2 secbgColor "
+                  onClick={() => setCalender(!calender)}
+                />
+              </div>
+              <div
+                className={
+                  calender ? 'd-block position-absolute end-0' : 'd-none'
+                }
+              >
+                <Calendars />
+              </div>
             </div>
 
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
                 تاريخ السند{' '}
               </label>
-              <input
-                className="form-control secbgColor"
-                type="text"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex secbgColor border border-2 rounded align-items-center ">
+                <input
+                  type="text"
+                  className="form-control bg-transparent border-0 "
+                  id="staticEmail2"
+                  value=""
+                />
+                <BsCalendarEvent
+                  className="ms-2 secbgColor "
+                  onClick={() => setCalender(!calender)}
+                />
+              </div>
+              <div
+                className={
+                  calender ? 'd-block position-absolute end-0' : 'd-none'
+                }
+              >
+                <Calendars />
+              </div>
             </div>
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
@@ -137,7 +191,7 @@ const مردود_توريد = () => {
                 value=""
               />
             </div>
-            <div className="col-">
+            <div className="col-6">
               <label for="staticEmail2" className="form-label">
                 إجمالي الضريبة{' '}
               </label>
@@ -148,104 +202,107 @@ const مردود_توريد = () => {
                 value=""
               />
             </div>
-            <div className="col- d-flex  justify-content-center align-items-center gap-2">
-              <div className=" d-flex  justify-content-center align-items-center gap-2">
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-4">
-                    18{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-4">
-                    18{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-4">
-                    21{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-4">
-                    24{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-3">
-                    القائم{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-              </div>
+            <div className="col-6">
+              <label for="staticEmail2" className="form-label">
+                اجمالي الخصم{' '}
+              </label>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
           </form>
         </div>
-        {/* form 2 */}
-        <div className="col-8 bg-white rounded p-2">
-          <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
+        {/*end form */}
+
+        {/*form */}
+        <div className="bg-white rounded p-2">
+          <div className="d-flex align-items-center justify-content-between w-100">
+            <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
+            <Button
+              variant="outline-light"
+              className=" secButtonColor "
+              size="sm"
+            >
+              <IoAddOutline className="text-light" />
+              إضافة سطر جديد
+            </Button>
+          </div>
           <form className="row g-4 mb-5 ">
-            <div className="col-5">
+            <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الصنف{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              </label>{' '}
+              <Dropdown className="w-100 ">
+                <Dropdown.Toggle
+                  variant="light"
+                  id="dropdown-basic"
+                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
+                >
+                  - - - - - - - - - - - -
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="w-100">
+                  <Dropdown.Item className="w-100" href="#/action-1">
+                    Action
+                  </Dropdown.Item>
+                  <Dropdown.Item className="w-100" href="#/action-2">
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item className="w-100" href="#/action-3">
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
-            <div className="col-5">
+            <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الفئة{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <Dropdown className="w-100 ">
+                <Dropdown.Toggle
+                  variant="light"
+                  id="dropdown-basic"
+                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
+                >
+                  - - - - - - - - - - - -
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="w-100">
+                  <Dropdown.Item className="w-100" href="#/action-1">
+                    Action
+                  </Dropdown.Item>
+                  <Dropdown.Item className="w-100" href="#/action-2">
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item className="w-100" href="#/action-3">
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
 
             <div className="col-4">
-              <label for="staticEmail2" className="form-label">
+              <label for="staticEmail2" className="form-label ">
                 المعدن{' '}
               </label>
-              <input
-                className="form-control secbgColor"
-                type="text"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  style={{ borderRadius: '0' }}
+                  className="form-control secbgColor rounded-end"
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button
+                  style={{ borderRadius: '0', padding: '.45rem .75rem' }}
+                  className="border border-0 buttonColor ms-2 rounded-start "
+                >
+                  تغيير
+                </Button>
+              </div>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -262,23 +319,47 @@ const مردود_توريد = () => {
               <label for="staticEmail2" className="form-label">
                 العيار{' '}
               </label>
-              <input
-                className="form-control secbgColor"
-                type="text"
-                id="staticEmail2"
-                value=""
-              />
+              <Dropdown className="w-100 ">
+                <Dropdown.Toggle
+                  variant="light"
+                  id="dropdown-basic"
+                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
+                >
+                  - - - - - - - - - - - -
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="w-100">
+                  <Dropdown.Item className="w-100" href="#/action-1">
+                    Action
+                  </Dropdown.Item>
+                  <Dropdown.Item className="w-100" href="#/action-2">
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item className="w-100" href="#/action-3">
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الأسهم{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  style={{ borderRadius: '0' }}
+                  className="form-control secbgColor rounded-end"
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button
+                  style={{ borderRadius: '0', padding: '.45rem .75rem' }}
+                  className="border border-0 buttonColor ms-2 rounded-start "
+                >
+                  تغيير
+                </Button>
+              </div>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -317,23 +398,39 @@ const مردود_توريد = () => {
               <label for="staticEmail2" className="form-label">
                 قيمة الالماس{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  className="form-control secbgColor "
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button className="border border-0 buttonColor ms-2  ">
+                  <div className="d-flex align-items-center gap-2 p-1 ">
+                    <MdOutlineKeyboardArrowDown />
+                    <MdOutlineKeyboardArrowUp />
+                  </div>
+                </Button>
+              </div>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 عدد الالماس{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  className="form-control secbgColor "
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button className="border border-0 buttonColor ms-2  ">
+                  <div className="d-flex align-items-center gap-2 p-1 ">
+                    <MdOutlineKeyboardArrowDown />
+                    <MdOutlineKeyboardArrowUp />
+                  </div>
+                </Button>
+              </div>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -350,25 +447,41 @@ const مردود_توريد = () => {
               <label for="staticEmail2" className="form-label">
                 ضريبة قيمة الالماس{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  className="form-control secbgColor "
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button className="border border-0 buttonColor ms-2  ">
+                  <div className="d-flex align-items-center gap-2 p-1 ">
+                    <MdOutlineKeyboardArrowDown />
+                    <MdOutlineKeyboardArrowUp />
+                  </div>
+                </Button>
+              </div>
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 وزن حجر الالماس{' '}
               </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
+              <div className="d-flex align-items-center ">
+                <input
+                  className="form-control secbgColor "
+                  type="text"
+                  id="staticEmail2"
+                  value=""
+                />
+                <Button className="border border-0 buttonColor ms-2  ">
+                  <div className="d-flex align-items-center gap-2 p-1 ">
+                    <MdOutlineKeyboardArrowDown />
+                    <MdOutlineKeyboardArrowUp />
+                  </div>
+                </Button>
+              </div>
             </div>
-            <div className="col-5">
+            <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 قيمة البضاعة الخارجية{' '}
               </label>
@@ -379,30 +492,8 @@ const مردود_توريد = () => {
                 value=""
               />
             </div>
-            <div className="col-5">
-              <label for="staticEmail2" className="form-label">
-                قيمة البضاعة الخارجية{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-8 d-flex  justify-content-center align-items-center gap-2">
-              <div className=" d-flex  justify-content-center align-items-center gap-2">
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-4">
-                    18{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
+            <div className=" d-flex  justify-content-center align-items-center gap-2">
+              <div className="col-5 d-flex  justify-content-center align-items-center gap-2">
                 <div className="">
                   <label for="staticEmail2" className="form-label me-4">
                     18{' '}
@@ -451,6 +542,7 @@ const مردود_توريد = () => {
             </div>
           </form>
         </div>
+        {/*end form2 */}
       </div>
     </Container>
   );

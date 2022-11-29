@@ -53,6 +53,10 @@ input {
 input:focus {
   outline: var(--mainColor) !important;
 }
+a{
+  text-decoration: none !important;
+  color: inherit !important;
+}
 /*end global */
 
 /* sideBar */

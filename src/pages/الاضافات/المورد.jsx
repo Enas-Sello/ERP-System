@@ -38,6 +38,7 @@ const المورد = () => {
             <div className="d-flex gap-2">
               <span className="textDarkyellow fs-4 fw-bold">3</span>
               <h4>مجموع مختارين</h4>
+              
               <Button
                 variant="outline-light"
                 size="sm"

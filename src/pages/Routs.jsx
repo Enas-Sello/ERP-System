@@ -25,12 +25,13 @@ import سداد from './الموردين/سداد';
 import مردود_توريد from './الموردين/مردود_توريد';
 import خصم from './الموردين/خصم';
 import صور from './الموردين/صور';
+import اضافه_سند_توريد from './الموردين/اضافه_سند_توريد';
 // التجزئة
 // التدقيق
 // لوحة التحكم
 const Routs = () => {
   return (
-    <Container className="secbgColor" >
+    <Container className="secbgColor">
       <Routes>
         {/* الاضافات */}
         <Route path="/بلد المنتج" element={<البلد />} />
@@ -55,6 +56,7 @@ const Routs = () => {
         <Route path="/مردود توريد" element={<مردود_توريد />} />
         <Route path="/خصم" element={<خصم />} />
         <Route path="/صور" element={<صور />} />
+        <Route path="/اضافه سند توريد" element={<اضافه_سند_توريد />} />
         {/* التجزئة */}
         {/* التدقيق */}
         {/* لوحة التحكم  */}
