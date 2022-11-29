@@ -48,7 +48,7 @@ const خصم = () => {
           <FilterCard />
         </Col>
         <Col lg={serach ? 9 : 12}>
-          <Tables SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
+          <Tables edit={'/'} SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
         </Col>
       </div>
     </Container>

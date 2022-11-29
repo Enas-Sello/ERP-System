@@ -26,8 +26,11 @@ import مردود_توريد from './الموردين/مردود_توريد';
 import خصم from './الموردين/خصم';
 import صور from './الموردين/صور';
 import اضافه_سند_توريد from './الموردين/اضافه_سند_توريد';
-import Billdetails from '../components/Billdetails';
+import Editتوريد from '../components/editتوريد';
 import Addbill from '../components/Addbill';
+import Addتوريد from '../components/Addتوريد';
+import Editالمده from '../components/Editالمده';
+import Editسداد from '../components/Editسداد';
 // التجزئة
 // التدقيق
 // لوحة التحكم
@@ -59,8 +62,11 @@ const Routs = () => {
         <Route path="/خصم" element={<خصم />} />
         <Route path="/صور" element={<صور />} />
         <Route path="/اضافه سند توريد" element={<اضافه_سند_توريد />} />
-        <Route path="/Billdetails" element={<Billdetails />} />
+        <Route path="/Editتوريد" element={<Editتوريد />} />
         <Route path="/Addbill" element={<Addbill />} />
+        <Route path="/Addتوريد" element={<Addتوريد />} />
+        <Route path="/Editالمده" element={<Editالمده />} />
+        <Route path="/Editسداد" element={<Editسداد />} />
         {/* التجزئة */}
         {/* التدقيق */}
         {/* لوحة التحكم  */}

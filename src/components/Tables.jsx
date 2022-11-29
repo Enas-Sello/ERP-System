@@ -5,7 +5,7 @@ import { CiEdit } from 'react-icons/ci';
 import { Row } from 'react-bootstrap';
 import Paginations from './Paginations';
 import { Link } from 'react-router-dom';
-function Tables({ Suplierheader, SuplierRows }) {
+function Tables({ Suplierheader, SuplierRows, edit }) {
   return (
     <div style={{ width: '100%' }}>
       <Table className="my-4 rounded">
@@ -42,7 +42,7 @@ function Tables({ Suplierheader, SuplierRows }) {
                   className="d-flex gap-3 justify-content-center align-items-center "
                   style={{ width: '100%' }}
                 >
-                  <Link to="/Billdetails">
+                  <Link to={`${edit}`}>
                     <CiEdit
                       className=" logoColor"
                       style={{

@@ -54,7 +54,11 @@ const توريد = () => {
           <FilterCard />
         </Col>
         <Col lg={serach ? 9 : 12}>
-          <Tables SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
+          <Tables
+            edit={'/Editتوريد'}
+            SuplierRows={SuplierRows}
+            Suplierheader={Suplierheader}
+          />
         </Col>
       </div>
     </Container>

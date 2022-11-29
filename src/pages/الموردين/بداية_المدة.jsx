@@ -48,6 +48,44 @@ const بداية_المدة = () =>
               </Button>
             </div>
           </div>
+          <div class="d-flex gap-4 mt-2 ">
+            <p className="logoColor fw-bold">تغيير </p>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label className="form-check-label" for="flexRadioDefault2">
+                الكل{' '}
+              </label>
+            </div>
+            <div class="form-check ">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label className="form-check-label" for="flexRadioDefault1">
+                بداية مدة
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label className="form-check-label" for="flexRadioDefault2">
+                زيادة رصيد{' '}
+              </label>
+            </div>
+          </div>
         </Row>
       </Row>
       <div className="d-flex gap-4">
@@ -55,7 +93,11 @@ const بداية_المدة = () =>
           <FilterCard />
         </Col>
         <Col lg={serach ? 9 : 12}>
-          <Tables SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
+          <Tables
+            edit={'/Editالمده'}
+            SuplierRows={SuplierRows}
+            Suplierheader={Suplierheader}
+          />
         </Col>
       </div>
     </Container>

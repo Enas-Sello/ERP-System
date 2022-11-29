@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Container, Dropdown } from 'react-bootstrap';
-import { BsCalendarEvent } from 'react-icons/bs';
-import { IoAddOutline } from 'react-icons/io5';
-import {
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowUp,
-} from 'react-icons/md';
-import Calendars from './Calenders';
+
 import PopUp from './PopUp';
 
 
-const Billdetails = () =>
-{
-    const [calender, setCalender] = useState(false);
-    const [modalShow, setModalShow] = useState(false);
+const Editتوريد = () => {
+  const [modalShow, setModalShow] = useState(false);
   return (
     <Container className="my-3">
       <div className="d-flex justify-content-between mb-4">
@@ -50,7 +42,6 @@ const Billdetails = () =>
         </div>
       </div>
       <div className="d-flex">
-        {/* form */}
         <div className="bg-white rounded  mx-4 p-2">
           <div className="d-flex gap-5 align-items-center">
             <p className="logoColor fs-5 fw-bold ">رقم السند</p>
@@ -68,54 +59,28 @@ const Billdetails = () =>
                 value=""
               />
             </div>
-            <div className="col-6 position-relative">
+            <div className="col-6">
               <label for="staticEmail2" className="form-label">
                 تاريخ التسجيل{' '}
               </label>
-              <div className="d-flex secbgColor border border-2 rounded align-items-center ">
-                <input
-                  type="text"
-                  className="form-control bg-transparent border-0 "
-                  id="staticEmail2"
-                  value=""
-                />
-                <BsCalendarEvent
-                  className="ms-2 secbgColor "
-                  onClick={() => setCalender(!calender)}
-                />
-              </div>
-              <div
-                className={
-                  calender ? 'd-block position-absolute end-0' : 'd-none'
-                }
-              >
-                {/* <Calendars /> */}
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
 
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
                 تاريخ السند{' '}
               </label>
-              <div className="d-flex secbgColor border border-2 rounded align-items-center ">
-                <input
-                  type="text"
-                  className="form-control bg-transparent border-0 "
-                  id="staticEmail2"
-                  value=""
-                />
-                <BsCalendarEvent
-                  className="ms-2 secbgColor "
-                  onClick={() => setCalender(!calender)}
-                />
-              </div>
-              <div
-                className={
-                  calender ? 'd-block position-absolute end-0' : 'd-none'
-                }
-              >
-                <Calendars />
-              </div>
+              <input
+                className="form-control secbgColor"
+                type="text"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
@@ -218,94 +183,42 @@ const Billdetails = () =>
             </div>
           </form>
         </div>
-        {/*end form */}
-
-        {/*form */}
         <div className="bg-white rounded p-2">
-          <div className="d-flex align-items-center justify-content-between w-100">
-            <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
-            <Button
-              variant="outline-light"
-              className=" secButtonColor "
-              size="sm"
-            >
-              <IoAddOutline className="text-light" />
-              إضافة سطر جديد
-            </Button>
-          </div>
+          <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
           <form className="row g-4 mb-5 ">
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الصنف{' '}
-              </label>{' '}
-              <Dropdown className="w-100 ">
-                <Dropdown.Toggle
-                  variant="light"
-                  id="dropdown-basic"
-                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
-                >
-                  - - - - - - - - - - - -
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className="w-100">
-                  <Dropdown.Item className="w-100" href="#/action-1">
-                    Action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              </label>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الفئة{' '}
               </label>
-              <Dropdown className="w-100 ">
-                <Dropdown.Toggle
-                  variant="light"
-                  id="dropdown-basic"
-                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
-                >
-                  - - - - - - - - - - - -
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className="w-100">
-                  <Dropdown.Item className="w-100" href="#/action-1">
-                    Action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
 
             <div className="col-4">
-              <label for="staticEmail2" className="form-label ">
+              <label for="staticEmail2" className="form-label">
                 المعدن{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  style={{ borderRadius: '0' }}
-                  className="form-control secbgColor rounded-end"
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button
-                  style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
-                >
-                  تغيير
-                </Button>
-              </div>
+              <input
+                className="form-control secbgColor"
+                type="text"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -322,47 +235,23 @@ const Billdetails = () =>
               <label for="staticEmail2" className="form-label">
                 العيار{' '}
               </label>
-              <Dropdown className="w-100 ">
-                <Dropdown.Toggle
-                  variant="light"
-                  id="dropdown-basic"
-                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
-                >
-                  - - - - - - - - - - - -
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className="w-100">
-                  <Dropdown.Item className="w-100" href="#/action-1">
-                    Action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              <input
+                className="form-control secbgColor"
+                type="text"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الأسهم{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  style={{ borderRadius: '0' }}
-                  className="form-control secbgColor rounded-end"
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button
-                  style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
-                >
-                  تغيير
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -401,39 +290,23 @@ const Billdetails = () =>
               <label for="staticEmail2" className="form-label">
                 قيمة الالماس{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  className="form-control secbgColor "
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button className="border border-0 buttonColor ms-2  ">
-                  <div className="d-flex align-items-center gap-2 p-1 ">
-                    <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowUp />
-                  </div>
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 عدد الالماس{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  className="form-control secbgColor "
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button className="border border-0 buttonColor ms-2  ">
-                  <div className="d-flex align-items-center gap-2 p-1 ">
-                    <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowUp />
-                  </div>
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -450,39 +323,23 @@ const Billdetails = () =>
               <label for="staticEmail2" className="form-label">
                 ضريبة قيمة الالماس{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  className="form-control secbgColor "
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button className="border border-0 buttonColor ms-2  ">
-                  <div className="d-flex align-items-center gap-2 p-1 ">
-                    <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowUp />
-                  </div>
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 وزن حجر الالماس{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  className="form-control secbgColor "
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button className="border border-0 buttonColor ms-2  ">
-                  <div className="d-flex align-items-center gap-2 p-1 ">
-                    <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowUp />
-                  </div>
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -545,10 +402,9 @@ const Billdetails = () =>
             </div>
           </form>
         </div>
-        {/*end form2 */}
       </div>
     </Container>
   );
 };
 
-export default Billdetails;
+export default Editتوريد;

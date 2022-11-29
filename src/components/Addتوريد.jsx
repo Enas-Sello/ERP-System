@@ -6,8 +6,8 @@ import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from 'react-icons/md';
-import Calendars from '../../components/Calenders';
-import PopUp from '../../components/PopUp';
+import Calendars from './Calenders';
+import PopUp from './PopUp';
 const Addتوريد = () =>
 {
     const [calender, setCalender] = useState(false);

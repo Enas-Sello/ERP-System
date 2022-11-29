@@ -1,37 +1,57 @@
-import React, { useState } from 'react'
-import { Button, Container, Dropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import Calendars from '../../components/Calenders';
-import {
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowUp,
-} from 'react-icons/md';
-import { BsCalendarEvent } from 'react-icons/bs';
-import { IoAddOutline } from 'react-icons/io5';
+import React from 'react'
+import { Button, Container } from 'react-bootstrap'
 
-const اضافه_سند_توريد = () =>
-{
-  const [calender, setCalender] = useState(false);
-  
+const Editالمده = () => {
   return (
-    <Container className="p-2">
-      <div className="d-flex justify-content-between mb-2">
-        <div className="d-flex ">
-          <p className="fs-5 fw-bold">إضافة سند التوريد</p>
+    <Container className="my-3">
+      <div className="d-flex justify-content-between flex-column mb-4">
+        <div className="d-flex  justify-content-between ">
+          <p className="fs-5 fw-bold">بداية مدة و زيادة رصيد</p>
+          <div className="d-flex text-start">
+            <Button className="buttonColor border border-0 ms-2 ">
+              القيود
+            </Button>
+            <Button className="secButtonColor border border-0 ms-2">
+              طباعة
+            </Button>{' '}
+            <Button className="border border-0 bg-danger ms-2">العودة</Button>
+          </div>
         </div>
-        <div className="d-flex text-start">
-          <Button className="bg-success border  border-0 ms-2 ">حفظ</Button>
-          <Button className="border border-0 bg-danger ms-2">
-            <Link to="/توريد">العودة</Link>
-          </Button>
+        <div class="d-flex gap-4 ">
+          <p className="text-danger fw-bold"> إختار نوع العملية : </p>
+          <div class="form-check ">
+            <input
+              className="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label className="form-check-label" for="flexRadioDefault1">
+              بداية مدة
+            </label>
+          </div>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              checked
+            />
+            <label className="form-check-label" for="flexRadioDefault2">
+              زيادة رصيد{' '}
+            </label>
+          </div>
         </div>
       </div>
-      
       <div className="d-flex">
         {/* form */}
-        <div className="bg-white rounded mb-1  mx-4 p-2">
-          
-          <form className="row g-2 mb-5">
+        <div className=" rounded  mx-4 p-2 mb-3">
+          <div className="d-flex gap-5 align-items-center rounded bg-white py-1 px-2 mb-3">
+            <p className="logoColor fs-5 fw-bold p-1">رقم السند</p>
+            <p className="textDarkyellow fs-6 fw-bold p-1">325654615</p>
+          </div>
+          <form className="row g-2 mb-5 rounded bg-white p-2">
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
                 إسم المستخدم{' '}
@@ -43,54 +63,28 @@ const اضافه_سند_توريد = () =>
                 value=""
               />
             </div>
-            <div className="col-6 position-relative">
+            <div className="col-6">
               <label for="staticEmail2" className="form-label">
                 تاريخ التسجيل{' '}
               </label>
-              <div className="d-flex secbgColor border border-2 rounded align-items-center ">
-                <input
-                  type="text"
-                  className="form-control bg-transparent border-0 "
-                  id="staticEmail2"
-                  value=""
-                />
-                <BsCalendarEvent
-                  className="ms-2 secbgColor "
-                  onClick={() => setCalender(!calender)}
-                />
-              </div>
-              <div
-                className={
-                  calender ? 'd-block position-absolute end-0' : 'd-none'
-                }
-              >
-                {/* <Calendars /> */}
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
 
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
                 تاريخ السند{' '}
               </label>
-              <div className="d-flex secbgColor border border-2 rounded align-items-center ">
-                <input
-                  type="text"
-                  className="form-control bg-transparent border-0 "
-                  id="staticEmail2"
-                  value=""
-                />
-                <BsCalendarEvent
-                  className="ms-2 secbgColor "
-                  onClick={() => setCalender(!calender)}
-                />
-              </div>
-              <div
-                className={
-                  calender ? 'd-block position-absolute end-0' : 'd-none'
-                }
-              >
-                <Calendars />
-              </div>
+              <input
+                className="form-control secbgColor"
+                type="text"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
@@ -195,92 +189,43 @@ const اضافه_سند_توريد = () =>
         </div>
         {/*end form */}
 
-        {/*form */}
-        <div className="bg-white mb-1 rounded p-2">
-          <div className="d-flex align-items-center justify-content-between w-100">
-            <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
-            <Button
-              variant="outline-light"
-              className=" secButtonColor "
-              size="sm"
-            >
-              <IoAddOutline className="text-light" />
-              إضافة سطر جديد
-            </Button>
-          </div>
+        {/* form 2*/}
+        <div className="bg-white rounded p-2 mb-3">
+          <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
           <form className="row g-4 mb-5 ">
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الصنف{' '}
-              </label>{' '}
-              <Dropdown className="w-100 ">
-                <Dropdown.Toggle
-                  variant="light"
-                  id="dropdown-basic"
-                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
-                >
-                  - - - - - - - - - - - -
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className="w-100">
-                  <Dropdown.Item className="w-100" href="#/action-1">
-                    Action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              </label>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الفئة{' '}
               </label>
-              <Dropdown className="w-100 ">
-                <Dropdown.Toggle
-                  variant="light"
-                  id="dropdown-basic"
-                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
-                >
-                  - - - - - - - - - - - -
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className="w-100">
-                  <Dropdown.Item className="w-100" href="#/action-1">
-                    Action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
 
             <div className="col-4">
-              <label for="staticEmail2" className="form-label ">
+              <label for="staticEmail2" className="form-label">
                 المعدن{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  style={{ borderRadius: '0' }}
-                  className="form-control secbgColor rounded-end"
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button
-                  style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
-                >
-                  تغيير
-                </Button>
-              </div>
+              <input
+                className="form-control secbgColor"
+                type="text"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -297,47 +242,23 @@ const اضافه_سند_توريد = () =>
               <label for="staticEmail2" className="form-label">
                 العيار{' '}
               </label>
-              <Dropdown className="w-100 ">
-                <Dropdown.Toggle
-                  variant="light"
-                  id="dropdown-basic"
-                  className="d-flex align-items-center justify-content-between w-100 border border-2 rounded "
-                >
-                  - - - - - - - - - - - -
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className="w-100">
-                  <Dropdown.Item className="w-100" href="#/action-1">
-                    Action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item className="w-100" href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              <input
+                className="form-control secbgColor"
+                type="text"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الأسهم{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  style={{ borderRadius: '0' }}
-                  className="form-control secbgColor rounded-end"
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button
-                  style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
-                >
-                  تغيير
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -376,39 +297,23 @@ const اضافه_سند_توريد = () =>
               <label for="staticEmail2" className="form-label">
                 قيمة الالماس{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  className="form-control secbgColor "
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button className="border border-0 buttonColor ms-2  ">
-                  <div className="d-flex align-items-center gap-2 p-1 ">
-                    <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowUp />
-                  </div>
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 عدد الالماس{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  className="form-control secbgColor "
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button className="border border-0 buttonColor ms-2  ">
-                  <div className="d-flex align-items-center gap-2 p-1 ">
-                    <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowUp />
-                  </div>
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -425,39 +330,23 @@ const اضافه_سند_توريد = () =>
               <label for="staticEmail2" className="form-label">
                 ضريبة قيمة الالماس{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  className="form-control secbgColor "
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button className="border border-0 buttonColor ms-2  ">
-                  <div className="d-flex align-items-center gap-2 p-1 ">
-                    <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowUp />
-                  </div>
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 وزن حجر الالماس{' '}
               </label>
-              <div className="d-flex align-items-center ">
-                <input
-                  className="form-control secbgColor "
-                  type="text"
-                  id="staticEmail2"
-                  value=""
-                />
-                <Button className="border border-0 buttonColor ms-2  ">
-                  <div className="d-flex align-items-center gap-2 p-1 ">
-                    <MdOutlineKeyboardArrowDown />
-                    <MdOutlineKeyboardArrowUp />
-                  </div>
-                </Button>
-              </div>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
             </div>
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
@@ -470,8 +359,30 @@ const اضافه_سند_توريد = () =>
                 value=""
               />
             </div>
-            <div className=" d-flex  justify-content-center align-items-center gap-2">
-              <div className="col-5 d-flex  justify-content-center align-items-center gap-2">
+            <div className="col-4">
+              <label for="staticEmail2" className="form-label">
+                قيمة البضاعة الخارجية{' '}
+              </label>
+              <input
+                type="text"
+                className="form-control secbgColor"
+                id="staticEmail2"
+                value=""
+              />
+            </div>
+            <div className="col-8 d-flex  justify-content-center align-items-center gap-2">
+              <div className=" d-flex  justify-content-center align-items-center gap-2">
+                <div className="">
+                  <label for="staticEmail2" className="form-label me-4">
+                    18{' '}
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control secbgColor"
+                    id="staticEmail2"
+                    value=""
+                  />
+                </div>
                 <div className="">
                   <label for="staticEmail2" className="form-label me-4">
                     18{' '}
@@ -520,10 +431,8 @@ const اضافه_سند_توريد = () =>
             </div>
           </form>
         </div>
-        {/*end form2 */}
       </div>
-    </Container>
-  );
+    </Container>)
 }
 
-export default اضافه_سند_توريد
+export default Editالمده
