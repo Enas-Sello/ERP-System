@@ -11,6 +11,7 @@ import { Suplierheader, SuplierRows } from '../../data.js';
 import FilterCard from '../../components/FilterCard';
 import { Link } from 'react-router-dom';
 import { IoAddOutline } from 'react-icons/io5';
+import AddNewSale from '../../components/AddNewSale';
 
 const خصم = () => {
   const [serach, setSearch] = useState(false);
@@ -37,16 +38,7 @@ const خصم = () => {
               </Button>
             </div>
             <div className="d-flex gap-2">
-              <Button
-                variant="outline-light"
-                size="sm"
-                className="secButtonColor"
-              >
-                <Link to="">
-                  <IoAddOutline className="ms-1" />
-                  إضافة سند
-                </Link>
-              </Button>
+             <AddNewSale/>
             </div>
           </div>
         </Row>

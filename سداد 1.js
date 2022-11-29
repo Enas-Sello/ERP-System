@@ -1,21 +1,48 @@
-import React from 'react'
-import { Button, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
-const اضافه_سند_توريد = () => {
-  return (
-    <Container className="my-3">
-      <div className="d-flex justify-content-between mb-4">
-        <div className="d-flex ">
-          <p className="fs-5 fw-bold">إضافة سند التوريد</p>
+ <Container className="my-3">
+      <div className="d-flex justify-content-between flex-column mb-4">
+        <div className="d-flex  justify-content-between ">
+          <p className="fs-5 fw-bold">إضافة سند السداد</p>
+          <div className="d-flex text-start">
+            <Button className="buttonColor border border-0 ms-2 ">
+              اعتماد
+            </Button>
+            <Button className="secButtonColor border border-0 ms-2 ">
+              القيود
+            </Button>
+            <Button className="secButtonColor border border-0 ms-2">
+              طباعة
+            </Button>{' '}
+            <Button className="border border-0 bg-danger ms-2">العودة</Button>
+          </div>
         </div>
-        <div className="d-flex text-start">
-          <Button className="bg-success border  border-0 ms-2 ">حفظ</Button>
-          <Button className="border border-0 bg-danger ms-2">
-            <Link to="/توريد">العودة</Link>
-          </Button>
+        <div class="d-flex gap-4 ">
+          <p className="text-danger fw-bold"> إختار نوع العملية : </p>
+          <div class="form-check ">
+            <input
+              className="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label className="form-check-label" for="flexRadioDefault1">
+              بداية مدة
+            </label>
+          </div>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              checked
+            />
+            <label className="form-check-label" for="flexRadioDefault2">
+              زيادة رصيد{' '}
+            </label>
+          </div>
         </div>
       </div>
+      {/* form */}
       <div className="d-flex">
         <div className="bg-white rounded  mx-4 p-2">
           <div className="d-flex gap-5 align-items-center">
@@ -158,7 +185,8 @@ const اضافه_سند_توريد = () => {
             </div>
           </form>
         </div>
-        <div className="bg-white rounded p-2">
+        {/* form 2 */}
+        <div className="col-8 bg-white rounded p-2">
           <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
           <form className="row g-4 mb-5 ">
             <div className="col-4">
@@ -217,169 +245,7 @@ const اضافه_سند_توريد = () => {
                 value=""
               />
             </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                الأسهم{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                الأجرة{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                ضريبة الاجور{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                ضريبة الذهب{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                قيمة الالماس{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                عدد الالماس{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                الخصم{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                ضريبة قيمة الالماس{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                وزن حجر الالماس{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className="col-4">
-              <label for="staticEmail2" className="form-label">
-                قيمة البضاعة الخارجية{' '}
-              </label>
-              <input
-                type="text"
-                className="form-control secbgColor"
-                id="staticEmail2"
-                value=""
-              />
-            </div>
-            <div className=" d-flex  justify-content-center align-items-center gap-2">
-              <div className="col-5 d-flex  justify-content-center align-items-center gap-2">
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-4">
-                    18{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-4">
-                    21{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-4">
-                    24{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-                <div className="">
-                  <label for="staticEmail2" className="form-label me-3">
-                    القائم{' '}
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control secbgColor"
-                    id="staticEmail2"
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
           </form>
         </div>
       </div>
     </Container>
-  );
-}
-
-export default اضافه_سند_توريد

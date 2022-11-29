@@ -4,6 +4,7 @@ import { RiDeleteBin5Line } from 'react-icons/ri';
 import { CiEdit } from 'react-icons/ci';
 import { Row } from 'react-bootstrap';
 import Paginations from './Paginations';
+import { Link } from 'react-router-dom';
 function Tables({ Suplierheader, SuplierRows }) {
   return (
     <div style={{ width: '100%' }}>
@@ -30,7 +31,7 @@ function Tables({ Suplierheader, SuplierRows }) {
         </thead>
         <tbody>
           {SuplierRows.map((td) => (
-            <tr key={td.id} className="text-center">
+            <tr key={td.id} className="text-center bg-white ">
               <td>{td.td1}</td>
               <td>{td.td2}</td>
               <td>{td.td3}</td>
@@ -41,15 +42,17 @@ function Tables({ Suplierheader, SuplierRows }) {
                   className="d-flex gap-3 justify-content-center align-items-center "
                   style={{ width: '100%' }}
                 >
-                  <CiEdit
-                    className=" logoColor"
-                    style={{
-                      width: '20px',
-                      height: '20px',
-                      cursor: 'pointer',
-                      border: '#468690 1px solid',
-                    }}
-                  />
+                  <Link to="/Billdetails">
+                    <CiEdit
+                      className=" logoColor"
+                      style={{
+                        width: '20px',
+                        height: '20px',
+                        cursor: 'pointer',
+                        border: '#468690 1px solid',
+                      }}
+                    />
+                  </Link>
                   <RiDeleteBin5Line
                     className="border border-danger text-danger"
                     style={{

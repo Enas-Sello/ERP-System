@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Row, Button, Col } from 'react-bootstrap';
-import اضافه_سند_توريد from './اضافه_سند_توريد';
 import Tables from '../../components/Tables';
 // icons
 import { BiFilterAlt } from 'react-icons/bi';

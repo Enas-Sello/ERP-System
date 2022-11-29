@@ -26,6 +26,8 @@ import مردود_توريد from './الموردين/مردود_توريد';
 import خصم from './الموردين/خصم';
 import صور from './الموردين/صور';
 import اضافه_سند_توريد from './الموردين/اضافه_سند_توريد';
+import Billdetails from '../components/Billdetails';
+import Addbill from '../components/Addbill';
 // التجزئة
 // التدقيق
 // لوحة التحكم
@@ -57,6 +59,8 @@ const Routs = () => {
         <Route path="/خصم" element={<خصم />} />
         <Route path="/صور" element={<صور />} />
         <Route path="/اضافه سند توريد" element={<اضافه_سند_توريد />} />
+        <Route path="/Billdetails" element={<Billdetails />} />
+        <Route path="/Addbill" element={<Addbill />} />
         {/* التجزئة */}
         {/* التدقيق */}
         {/* لوحة التحكم  */}
