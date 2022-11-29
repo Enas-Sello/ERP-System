@@ -17,7 +17,7 @@ const مردود_توريد = () =>
   return (
     <Container className="mt-3">
       <Row>
-        <p className="fs-5 fw-bold">سند التوريد</p>
+        <p className="fs-5 fw-bold">مردود توريد</p>
         <Row>
           <div className="d-flex flex-sm-column flex-lg-row justify-content-between">
             <div className="d-flex gap-2">
@@ -55,7 +55,7 @@ const مردود_توريد = () =>
           <FilterCard />
         </Col>
         <Col lg={serach ? 9 : 12}>
-          <Tables SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
+          <Tables  SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
         </Col>
       </div>
     </Container>

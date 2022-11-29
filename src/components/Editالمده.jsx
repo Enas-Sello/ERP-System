@@ -3,7 +3,7 @@ import { Button, Container } from 'react-bootstrap'
 
 const Editالمده = () => {
   return (
-    <Container className="my-3">
+    <Container className="my-">
       <div className="d-flex justify-content-between flex-column mb-4">
         <div className="d-flex  justify-content-between ">
           <p className="fs-5 fw-bold">بداية مدة و زيادة رصيد</p>
@@ -192,7 +192,7 @@ const Editالمده = () => {
         {/* form 2*/}
         <div className="bg-white rounded p-2 mb-3">
           <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
-          <form className="row g-4 mb-5 ">
+          <form className="row g-3 mb-5 ">
             <div className="col-4">
               <label for="staticEmail2" className="form-label">
                 الصنف{' '}
