@@ -10,6 +10,43 @@ const Addمورد = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // store inputs
+  const [detail, setDetail] = useState({
+    name: '',
+    number: '',
+    account: '',
+    tex_name: '',
+    mobile: '',
+    national_adress: '',
+    tax_number: '',
+    salery_value: '',
+    email: '',
+    commercial_number: '',
+    adress: '',
+    fax: '',
+    web: '',
+    iban: '',
+    status: '',
+    country: '',
+    type: '',
+    show: '',
+    bank_name: '',
+  });
+  const handelChang = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+
+    setDetail((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  // send to back end
+  const handelSubmit = (e) => {
+    //conect to api here
+    console.log(detail);
+  };
+  console.log(detail);
   return (
     <>
       <Button
@@ -35,7 +72,9 @@ const Addمورد = () => {
                 <Button variant="danger">
                   <Link to="/المورد">العودة</Link>
                 </Button>{' '}
-                <Button variant="success">حفظ </Button>{' '}
+                <Button type="submit" onSubmit={handelSubmit} variant="success">
+                  حفظ{' '}
+                </Button>{' '}
               </div>
               <p className="fs-2 fw-bolder logoColor ms-5 ">Altebr</p>
             </div>
@@ -46,16 +85,17 @@ const Addمورد = () => {
           <div className="bg-light p-2 text-end rounded ">
             <p className="fs-5 fw-bold">إضافة مورد جديد</p>
             <div className="d-flex align-items-center gap-2  p-2">
-              <form className="row g-2">
+              <form onSubmit={handelSubmit} className="row g-2">
                 <div className="col-6">
                   <label for="staticEmail2" className="form-label">
                     إسم المورد{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="name"
                   />
                 </div>
                 <div className="col-6">
@@ -63,27 +103,31 @@ const Addمورد = () => {
                     رقم المورد
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="number"
                   />
                 </div>
                 <div className="col-6">
-                  <p>دولة المورد</p>
+                  <p>حالة المورد</p>
                   <select
+                    onChange={handelChang}
+                    name="status"
                     className="form-select"
                     aria-label="Default select example"
                   >
-                    <option selected>نشط</option>
-                    <option value="1">One</option>
+                    <option value="1">نشط</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
                 </div>
                 <div className="col-6">
-                  <p>حالة المورد</p>
+                  <p>دولة المورد</p>
                   <select
+                    onChange={handelChang}
+                    name="country"
                     className="form-select m-0 "
                     aria-label="Default select example"
                   >
@@ -100,15 +144,18 @@ const Addمورد = () => {
                     رقم حساب المورد
                   </label>
                   <input
+                    onChange={handelChang}
                     className="form-control"
                     type="text"
                     id="staticEmail2"
-                    value=""
+                    name="account"
                   />
                 </div>
                 <div className="col-6">
                   <p style={{ margin: '4px' }}>نوع المورد </p>
                   <select
+                    onChange={handelChang}
+                    name="type"
                     className="form-select"
                     aria-label="Default select example"
                   >
@@ -125,10 +172,11 @@ const Addمورد = () => {
                     الإسم الضريبى{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="tex_name"
                   />
                 </div>
                 <div className="col-6">
@@ -136,10 +184,11 @@ const Addمورد = () => {
                     الهاتف{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="mobile"
                   />
                 </div>
                 <div className="col-6">
@@ -147,10 +196,11 @@ const Addمورد = () => {
                     العنوان الوطنى{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="national_adress"
                   />
                 </div>
                 <div className="col-6">
@@ -158,10 +208,11 @@ const Addمورد = () => {
                     الرقم الضريبى{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="tax_number"
                   />
                 </div>
                 <div className="d-flex ">
@@ -170,9 +221,10 @@ const Addمورد = () => {
                       ضريبة الأجور / القيمة
                     </label>
                     <input
+                      onChange={handelChang}
                       className="form-check-input"
                       type="checkbox"
-                      value=""
+                      name="salery_value"
                       id="flexCheckDefault"
                     />
                   </div>
@@ -181,9 +233,10 @@ const Addمورد = () => {
                       ضريبة الذهب
                     </label>
                     <input
+                      onChange={handelChang}
                       className="form-check-input"
                       type="checkbox"
-                      value=""
+                      name="gold_tax"
                       id="flexCheckDefault"
                     />
                   </div>
@@ -193,10 +246,11 @@ const Addمورد = () => {
                     البريد الالكتروني{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="email"
                   />
                 </div>
                 <div className="col-6">
@@ -204,10 +258,11 @@ const Addمورد = () => {
                     رقم السجل التجارى{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="commercial_number"
                   />
                 </div>
                 <div className="col-6">
@@ -215,10 +270,11 @@ const Addمورد = () => {
                     العنوان
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="adress"
                   />
                 </div>
                 <div className="col-6">
@@ -226,15 +282,18 @@ const Addمورد = () => {
                     الفاكس
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="fax"
                   />
                 </div>
                 <div className="col-6 ">
                   <p style={{ margin: '4px' }}>المدينة </p>
                   <select
+                    onChange={handelChang}
+                    name="town"
                     className="form-select"
                     aria-label="Default select example"
                   >
@@ -251,15 +310,18 @@ const Addمورد = () => {
                     موقع الانترنت{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="web"
                   />
                 </div>
                 <div className="col-6 ">
                   <p style={{ margin: '4px' }}>إسم البنك </p>
                   <select
+                    onChange={handelChang}
+                    name="bank_name"
                     className="form-select"
                     aria-label="Default select example"
                   >
@@ -274,6 +336,8 @@ const Addمورد = () => {
                 <div className="col-6 ">
                   <p style={{ margin: '4px' }}>اظهار </p>
                   <select
+                    name="show"
+                    onChange={handelChang}
                     className="form-select"
                     aria-label="Default select example"
                   >
@@ -290,10 +354,11 @@ const Addمورد = () => {
                     IBAN{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="iban"
                   />
                 </div>
                 <div className="col-6">
@@ -301,10 +366,11 @@ const Addمورد = () => {
                     رقم حساب البنكى{' '}
                   </label>
                   <input
+                    onChange={handelChang}
                     type="text"
                     className="form-control"
                     id="staticEmail2"
-                    value=""
+                    name="bank-account"
                   />
                 </div>
               </form>
