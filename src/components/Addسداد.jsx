@@ -46,7 +46,7 @@ const Addسداد = () => {
         </div>
       </div>
 
-      <div className="d-flex">
+      <div className="d-flex flex-column flex-lg-row">
         {/* form */}
         <div className="bg-white rounded  mx-4 p-2">
           <form className="row g-2 mb-5">

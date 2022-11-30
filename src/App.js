@@ -9,10 +9,11 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Container fluid style={{ margin: '0', padding: '0' }}>
+    <Container fluid style={{ margin: '0', padding: '0', height: '100vh',display:'flex',flexDirection:'column', }}>
       <NavBar />
-      <main className="d-flex "
-        // style={ { height: '100vh' } }
+      <main
+        className="d-flex w-100"
+        style={ { height: '100vh' } }
       >
         <SideBar />
         <Routes>

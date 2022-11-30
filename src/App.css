@@ -1,18 +1,18 @@
 /* global */
 
 :root {
-  --mainColor: #468690;
-  --lightYello: #f4bc4b;
-  --darkGray: #343a40;
+  --mainColor: #295E57;
+  --lightYello: #DB8;
+  --darkGray: #6A3C2C;
   --lightGray: #eaecec;
-  --darkYellow: #927054;
+  --darkYellow: #DB8027;
 }
 
 * {
   font-family: 'Tajawal', sans-serif;
   font-size: 15px;
   	transition-duration: 100ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 button:hover {
   color: var(--lightYello) !important;

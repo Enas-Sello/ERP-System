@@ -11,7 +11,7 @@ function Tables({ Suplierheader, SuplierRows, edit }) {
       <Table className="my-4 rounded">
         <thead>
           <tr
-            style={{ backgroundColor: '#46869040' }}
+            style={{ backgroundColor: 'rgb(152 200 193)' }}
             className=" rounded my-4 text-center fw-bold"
           >
             {Suplierheader.map((th) => (

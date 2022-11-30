@@ -16,7 +16,7 @@ const Add_سند_توريد = () => {
 
   return (
     <Container className="p-2">
-      <div className="d-flex justify-content-between mb-2">
+      <div className="d-flex  justify-content-between mb-2">
         <div className="d-flex ">
           <p className="fs-5 fw-bold">إضافة سند التوريد</p>
         </div>
@@ -56,7 +56,7 @@ const Add_سند_توريد = () => {
         </div>
       </div>
 
-      <div className="d-flex">
+      <div className="d-flex flex-column flex-lg-row">
         {/* form */}
         <div className="bg-white rounded mb-1  mx-4 p-2">
           <form className="row g-2 mb-5">

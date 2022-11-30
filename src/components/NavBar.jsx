@@ -8,14 +8,20 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { IoIosArrowDown, IoMdNotificationsOutline } from 'react-icons/io';
 // assets
 import placeholder from '../assets/placeholder.jpg';
+import logo from '../assets/INVOICE_logo.png';
+
 function NavBar() {
   return (
-    <Navbar bg="light" expand="md">
+    <Navbar className="p-0" bg="light" expand="sm">
       <Container fluid>
         <Navbar.Brand href="/" className="fs-2 fw-bolder logoColor ms-5 ">
-          Altebr
+          <img
+            src={logo}
+            style={{ width: '50px', height: '50px', objectFit: 'contain' }}
+            alt="logo"
+          />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
         <Navbar.Collapse id="navbarScroll">
           <Form className="d-flex">
             <Form.Control

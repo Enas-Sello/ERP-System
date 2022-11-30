@@ -44,7 +44,7 @@ const Addخصم = () => {
           {/* <AddNewForm /> */}
           <div className="bg-light p-2 text-end rounded h-100">
             <p className="fs-5 fw-bold"> سند الخصم</p>
-            <div className="d-flex align-items-center gap-2  p-2">
+            <div className="d-flex flex-column flex-lg-row align-items-center gap-2  p-2">
               <form className="row g-2">
                 <div className="col-6 position-relative">
                   <label for="staticEmail2" className="form-label">

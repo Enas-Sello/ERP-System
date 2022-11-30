@@ -44,7 +44,7 @@ const Editالمده = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex">
+      <div className="d-flex flex-column flex-lg-row">
         {/* form */}
         <div className=" rounded  mx-4 p-2 mb-3">
           <div className="d-flex gap-5 align-items-center rounded bg-white py-1 px-2 mb-3">
@@ -432,7 +432,8 @@ const Editالمده = () => {
           </form>
         </div>
       </div>
-    </Container>)
+    </Container>
+  );
 }
 
 export default Editالمده

@@ -21,17 +21,17 @@ const SideBar = () => {
       <Sidebar
         transitionDuration={'300'}
         style={{ color: 'white' }}
-        backgroundColor={'#343a40'}
+        backgroundColor={'#295E57'}
       >
         <Menu className="p-3 position-relative">
           <button
-            className="position-absolute border border-0 text-white bgColor top-0 end-0"
+            className="position-absolute border secButtonColor border-0 text-white  top-0 end-0"
             onClick={() => collapseSidebar()}
           >
             <CgMenuRight />
           </button>
           <MenuItem disabled icon={<MdDomain />}>
-            <h2 className="fs-5 fw-bold">القائمة الرئيسيه</h2>
+            <h2 className="fs-6 fw-bold">القائمة الرئيسيه</h2>
           </MenuItem>
 
           {sidebar.map((sub) => (
@@ -47,7 +47,7 @@ const SideBar = () => {
                   className={
                     selected === i && true
                       ? 'textColor fw-bold'
-                      : 'text-white bgColor fw-bold'
+                      : 'text-white secButtonColor fw-bold'
                   }
                   routerLink={<Link to={item.title} />}
                   key={item.i}

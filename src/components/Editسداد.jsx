@@ -48,7 +48,7 @@ const Editسداد = () => {
         </div>
       </div>
       {/* form */}
-      <div className="d-flex">
+      <div className="d-flex flex-column flex-lg-row">
         <div className="bg-white rounded  mx-4 p-2">
           <div className="d-flex gap-5 align-items-center">
             <p className="logoColor fs-5 fw-bold ">رقم السند</p>

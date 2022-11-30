@@ -84,7 +84,7 @@ const Addمورد = () => {
           {/* add from */}
           <div className="bg-light p-2 text-end rounded ">
             <p className="fs-5 fw-bold">إضافة مورد جديد</p>
-            <div className="d-flex align-items-center gap-2  p-2">
+            <div className="d-flex flex-column flex-lg-row align-items-center gap-2  p-2">
               <form onSubmit={handelSubmit} className="row g-2">
                 <div className="col-6">
                   <label for="staticEmail2" className="form-label">
