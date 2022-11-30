@@ -1,17 +1,14 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useState } from 'react';
 import { Container, Row, Button, Col } from 'react-bootstrap';
-import AddNew from '../../components/AddNew';
 import Tables from '../../components/Tables';
 // icons
-import { SlOptionsVertical } from 'react-icons/sl';
 import { BiFilterAlt } from 'react-icons/bi';
 
 // data
 import { Suplierheader, SuplierRows } from '../../data.js';
 import FilterCard from '../../components/FilterCard';
-import { Link } from 'react-router-dom';
-import { IoAddOutline } from 'react-icons/io5';
-import AddNewSale from '../../components/AddNewSale';
+import Addخصم from '../../components/Addخصم';
 
 const خصم = () => {
   const [serach, setSearch] = useState(false);
@@ -24,12 +21,12 @@ const خصم = () => {
           <div className="d-flex flex-sm-column flex-lg-row justify-content-between">
             <div className="d-flex gap-2">
               <h4>مجموع السندات :</h4>
-              <Button variant="outline-light" size="sm" className="buttonColor">
+              <Button variant="outline-light" size="md" className="buttonColor">
                 10
               </Button>
               <Button
                 variant="outline-light"
-                size="sm"
+                size="md"
                 className="bgColor"
                 onClick={() => setSearch(!serach)}
               >
@@ -38,7 +35,7 @@ const خصم = () => {
               </Button>
             </div>
             <div className="d-flex gap-2">
-             <AddNewSale/>
+              <Addخصم />
             </div>
           </div>
         </Row>
@@ -48,7 +45,11 @@ const خصم = () => {
           <FilterCard />
         </Col>
         <Col lg={serach ? 9 : 12}>
-          <Tables edit={'/'} SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
+          <Tables
+            edit={'/Editخصم'}
+            SuplierRows={SuplierRows}
+            Suplierheader={Suplierheader}
+          />
         </Col>
       </div>
     </Container>

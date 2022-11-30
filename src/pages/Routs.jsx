@@ -25,12 +25,17 @@ import سداد from './الموردين/سداد';
 import مردود_توريد from './الموردين/مردود_توريد';
 import خصم from './الموردين/خصم';
 import صور from './الموردين/صور';
-import اضافه_سند_توريد from './الموردين/اضافه_سند_توريد';
-import Editتوريد from '../components/editتوريد';
-import Addbill from '../components/Addbill';
-import Addتوريد from '../components/Addتوريد';
+// add
+import Add_سند_توريد from '../components/Add_سند_توريد';
+import Addسداد from '../components/Addسداد';
+import Addمده from '../components/Addمده';
+import Addمردود_توريد from '../components/Addمردود_توريد';
+// edit
+import Editتوريد from '../components/Editتوريد';
+import Editمردود_توريد from '../components/Editمردود_توريد';
 import Editالمده from '../components/Editالمده';
 import Editسداد from '../components/Editسداد';
+import Editخصم from '../components/Editخصم';
 // التجزئة
 // التدقيق
 // لوحة التحكم
@@ -61,15 +66,22 @@ const Routs = () => {
         <Route path="/مردود توريد" element={<مردود_توريد />} />
         <Route path="/خصم" element={<خصم />} />
         <Route path="/صور" element={<صور />} />
-        <Route path="/اضافه سند توريد" element={<اضافه_سند_توريد />} />
-        <Route path="/Editتوريد" element={<Editتوريد />} />
-        <Route path="/Addbill" element={<Addbill />} />
-        <Route path="/Addتوريد" element={<Addتوريد />} />
-        <Route path="/Editالمده" element={<Editالمده />} />
-        <Route path="/Editسداد" element={<Editسداد />} />
         {/* التجزئة */}
         {/* التدقيق */}
         {/* لوحة التحكم  */}
+
+        {/* componants */}
+        {/* add */}
+        <Route path="/Addسداد" element={<Addسداد />} />
+        <Route path="/Editتوريد" element={<Editتوريد />} />
+        <Route path="/Add_سند_توريد" element={<Add_سند_توريد />} />
+        <Route path="/Editمردود_توريد" element={<Editمردود_توريد />} />
+        <Route path="/Addمده" element={<Addمده />} />
+        <Route path="/Addمردود_توريد" element={<Addمردود_توريد />} />
+        {/* edit */}
+        <Route path="/Editسداد" element={<Editسداد />} />
+        <Route path="/Editالمده" element={<Editالمده />} />
+        <Route path="/Editخصم" element={<Editخصم />} />
       </Routes>
     </Container>
   );

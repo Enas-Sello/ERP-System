@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Button, Container, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Calendars from '../../components/Calenders';
+import Calendars from './Calenders';
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
@@ -9,10 +9,9 @@ import {
 import { BsCalendarEvent } from 'react-icons/bs';
 import { IoAddOutline } from 'react-icons/io5';
 
-const اضافه_سند_توريد = () =>
-{
+const Addمده = () => {
   const [calender, setCalender] = useState(false);
-  
+
   return (
     <Container className="p-2">
       <div className="d-flex justify-content-between mb-2">
@@ -22,15 +21,14 @@ const اضافه_سند_توريد = () =>
         <div className="d-flex text-start">
           <Button className="bg-success border  border-0 ms-2 ">حفظ</Button>
           <Button className="border border-0 bg-danger ms-2">
-            <Link to="/توريد">العودة</Link>
+            <Link to="/بداية المدة">العودة</Link>
           </Button>
         </div>
       </div>
-      
+
       <div className="d-flex">
         {/* form */}
         <div className="bg-white rounded mb-1  mx-4 p-2">
-          
           <form className="row g-2 mb-5">
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
@@ -524,6 +522,6 @@ const اضافه_سند_توريد = () =>
       </div>
     </Container>
   );
-}
+};
 
-export default اضافه_سند_توريد
+export default Addمده;

@@ -2,16 +2,11 @@ import React, { useState } from 'react';
 import { Button, Container, Dropdown } from 'react-bootstrap';
 import { BsCalendarEvent } from 'react-icons/bs';
 import { IoAddOutline } from 'react-icons/io5';
-import {
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowUp,
-} from 'react-icons/md';
-import Calendars from './Calenders';
-import PopUp from './PopUp';
 
-const Addbill = () => {
+import Calendars from './Calenders';
+
+const Addسداد = () => {
   const [calender, setCalender] = useState(false);
-  const [modalShow, setModalShow] = useState(false);
   return (
     <Container className="my-3">
       <div className="d-flex justify-content-between">
@@ -19,32 +14,9 @@ const Addbill = () => {
           <p className="fs-5 fw-bold">إضافة سند السداد</p>
         </div>
         <div className="d-flex text-start">
-          <Button
-            className=" border bg-success border-0 ms-2 "
-            onClick={() => setModalShow(true)}
-          >
-            حفظ
-          </Button>
-          <PopUp
-            color={'warning'}
-            text={'لا يمكن اعتماد فرق اسهم اكثر من خسين  سهم'}
-            Button={false}
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-          />
-          <Button
-            className="border border-0 bg-danger ms-2"
-            onClick={() => setModalShow(true)}
-          >
-            العودة
-          </Button>
-          <PopUp
-            color={'danger'}
-            text={' سيتم الان اغلاق السند '}
-            Button={true}
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-          />
+          <Button className=" border bg-success border-0 ms-2 ">حفظ</Button>
+
+          <Button className="border border-0 bg-danger ms-2">العودة</Button>
         </div>
       </div>
       <div class="d-flex gap-4 ">
@@ -343,4 +315,4 @@ const Addbill = () => {
   );
 };
 
-export default Addbill;
+export default Addسداد;

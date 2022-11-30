@@ -41,7 +41,7 @@ const توريد = () => {
                 className="secButtonColor"
               >
                 <IoAddOutline className="ms-1" />
-                <Link className="" to="/اضافه سند توريد">
+                <Link className="" to="/Add_سند_توريد">
                   إضافة سند
                 </Link>
               </Button>

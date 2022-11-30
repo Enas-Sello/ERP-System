@@ -42,7 +42,7 @@ const مردود_توريد = () =>
                 className="secButtonColor"
               >
                 <IoAddOutline className="ms-1" />
-                <Link className="" to="/Addتوريد">
+                <Link className="" to="/Addمردود_توريد">
                   إضافة سند
                 </Link>
               </Button>
@@ -55,7 +55,11 @@ const مردود_توريد = () =>
           <FilterCard />
         </Col>
         <Col lg={serach ? 9 : 12}>
-          <Tables  SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
+          <Tables
+            edit={'/Editمردود_توريد'}
+            SuplierRows={SuplierRows}
+            Suplierheader={Suplierheader}
+          />
         </Col>
       </div>
     </Container>

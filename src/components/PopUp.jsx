@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { BiQuestionMark } from 'react-icons/bi';
+import { BsExclamationLg } from 'react-icons/bs';
 const PopUp = (props) => {
   return (
       <Modal
@@ -11,9 +11,9 @@ const PopUp = (props) => {
         centered
       >
         <Modal.Body>
-          <div className="d-flex  align-items-center justify-content-between flex-column w-100">
-            <p className={`text-${props.color} fs-4 fw-bold`}>{props.text}</p>
-            <BiQuestionMark className={`text-${props.color} fs-4 fw-bold`} />
+          <div className="d-flex  align-items-center justify-content-between gap-4 flex-column w-100">
+            <BsExclamationLg className={`text-${props.color} fs-1 fw-bold`} />
+            <p className={`text-${props.color} fs-5 fw-bold`}>{props.text}</p>
           </div>
         </Modal.Body>
 

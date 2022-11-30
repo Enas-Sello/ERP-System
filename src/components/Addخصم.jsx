@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { IoAddOutline } from 'react-icons/io5';
-import AddNewForm from './AddNewForm';
 import { BsCalendarEvent } from 'react-icons/bs';
 import Calendars from './Calenders';
 
-const AddNewSale = () => {
+const Addخصم = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -21,7 +20,7 @@ const AddNewSale = () => {
         onClick={handleShow}
       >
         <IoAddOutline className="text-light" />
-        إضافة سند{' '}
+        إضافة خصم{' '}
       </Button>
 
       <Offcanvas show={show} onHide={handleClose} className="secbgColor ">
@@ -174,4 +173,4 @@ const AddNewSale = () => {
   );
 };
 
-export default AddNewSale;
+export default Addخصم;

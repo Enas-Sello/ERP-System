@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useState } from 'react';
 import { Container, Row, Button, Col } from 'react-bootstrap';
-import AddNew from '../../components/AddNew';
+import Addمورد from '../../components/Addمورد';
 import Tables from '../../components/Tables';
 // icons
 import { SlOptionsVertical } from 'react-icons/sl';
@@ -27,7 +28,7 @@ const المورد = () => {
               </Button>
               <Button
                 variant="outline-light"
-                size="sm"
+                size="md"
                 className="bgColor"
                 onClick={() => setSearch(!serach)}
               >
@@ -41,13 +42,13 @@ const المورد = () => {
               
               <Button
                 variant="outline-light"
-                size="sm"
+                size="md"
                 className="secButtonColor"
               >
                 <SlOptionsVertical />
               </Button>
 
-              <AddNew />
+              <Addمورد />
             </div>
           </div>
         </Row>
@@ -57,7 +58,7 @@ const المورد = () => {
           <FilterCard />
         </Col>
         <Col lg={serach ? 9 : 12}>
-          <Tables SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
+          <Tables edit={'/'} SuplierRows={SuplierRows} Suplierheader={Suplierheader} />
         </Col>
       </div>
     </Container>

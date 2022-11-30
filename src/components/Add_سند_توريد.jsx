@@ -1,59 +1,64 @@
 import React, { useState } from 'react';
 import { Button, Container, Dropdown } from 'react-bootstrap';
-import { BsCalendarEvent } from 'react-icons/bs';
-import { IoAddOutline } from 'react-icons/io5';
+import Calendars from './Calenders';
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from 'react-icons/md';
-import Calendars from './Calenders';
+import { BsCalendarEvent } from 'react-icons/bs';
+import { IoAddOutline } from 'react-icons/io5';
 import PopUp from './PopUp';
-const Addتوريد = () =>
-{
-    const [calender, setCalender] = useState(false);
-    const [modalShow, setModalShow] = useState(false);
+
+const Add_سند_توريد = () => {
+  const [calender, setCalender] = useState(false);
+  const [dangerPopUp, setdangerPopUp] = useState(false);
+  const [warningPopUp, setwarningPopUp] = useState(false);
+
   return (
-    <Container className="my-3">
-      <div className="d-flex justify-content-between mb-4">
+    <Container className="p-2">
+      <div className="d-flex justify-content-between mb-2">
         <div className="d-flex ">
           <p className="fs-5 fw-bold">إضافة سند التوريد</p>
         </div>
         <div className="d-flex text-start">
           <Button
-            className=" border bg-success border-0 ms-2 "
-            onClick={() => setModalShow(true)}
+            className="bg-success border  border-0 ms-2 "
+            onClick={() => setwarningPopUp(!warningPopUp)}
           >
             حفظ
           </Button>
+          {/*  */}
           <PopUp
             color={'warning'}
-            text={'لا يمكن اعتماد فرق اسهم اكثر من خسين  سهم'}
+            text={'لا يمكن اعتماد فرق اسهم اكثر من خسمين  سهم'}
             Button={false}
-            show={modalShow}
-            onHide={() => setModalShow(false)}
+            show={warningPopUp}
+            onHide={() => setwarningPopUp(false)}
           />
+
+          {/*  */}
           <Button
             className="border border-0 bg-danger ms-2"
-            onClick={() => setModalShow(true)}
+            onClick={() => setdangerPopUp(!dangerPopUp)}
           >
             العودة
           </Button>
+          {/*  */}
           <PopUp
             color={'danger'}
             text={' سيتم الان اغلاق السند '}
             Button={true}
-            show={modalShow}
-            onHide={() => setModalShow(false)}
+            show={dangerPopUp}
+            onHide={() => setdangerPopUp(false)}
           />
+
+          {/*  */}
         </div>
       </div>
+
       <div className="d-flex">
         {/* form */}
-        <div className="bg-white rounded  mx-4 p-2">
-          <div className="d-flex gap-5 align-items-center">
-            <p className="logoColor fs-5 fw-bold ">رقم السند</p>
-            <p className="textDarkyellow fs-6 fw-bold ">325654615</p>
-          </div>
+        <div className="bg-white rounded mb-1  mx-4 p-2">
           <form className="row g-2 mb-5">
             <div className="col-6">
               <label for="staticEmail2" className="form-label">
@@ -219,7 +224,7 @@ const Addتوريد = () =>
         {/*end form */}
 
         {/*form */}
-        <div className="bg-white rounded p-2">
+        <div className="bg-white mb-1 rounded p-2">
           <div className="d-flex align-items-center justify-content-between w-100">
             <p className="logoColor fs-6 fw-bold">تفاصيل سند التوريد</p>
             <Button
@@ -549,4 +554,4 @@ const Addتوريد = () =>
   );
 };
 
-export default Addتوريد;
+export default Add_سند_توريد;

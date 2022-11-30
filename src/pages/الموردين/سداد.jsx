@@ -42,7 +42,7 @@ const سداد = () =>
                 className="secButtonColor"
               >
                 <IoAddOutline className="ms-1" />
-                <Link className="" to="/Addbill">
+                <Link className="" to="/Addسداد">
                   إضافة سند
                 </Link>
               </Button>

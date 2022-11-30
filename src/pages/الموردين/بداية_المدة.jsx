@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Button, Col } from 'react-bootstrap';
-import AddNew from '../../components/AddNew';
 import Tables from '../../components/Tables';
-import { SlOptionsVertical } from 'react-icons/sl';
 import { BiFilterAlt } from 'react-icons/bi';
 // data
 import { Suplierheader, SuplierRows } from '../../data.js';
@@ -22,12 +20,12 @@ const بداية_المدة = () =>
           <div className="d-flex flex-sm-column flex-lg-row justify-content-between">
             <div className="d-flex gap-2">
               <h4>مجموع السندات :</h4>
-              <Button variant="outline-light" size="sm" className="buttonColor">
+              <Button variant="outline-light" size="md" className="buttonColor">
                 20
               </Button>
               <Button
                 variant="outline-light"
-                size="sm"
+                size="md"
                 className="bgColor"
                 onClick={() => setSearch(!serach)}
               >
@@ -42,7 +40,7 @@ const بداية_المدة = () =>
                 className="secButtonColor"
               >
                 <IoAddOutline className="ms-1" />
-                <Link className="" to="/اضافه سند توريد">
+                <Link className="" to="/Addمده">
                   إضافة سند
                 </Link>
               </Button>
