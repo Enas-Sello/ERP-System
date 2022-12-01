@@ -1,14 +1,15 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { useState } from 'react';
-import { Container, Row, Button, Col } from 'react-bootstrap';
+import { Container, Row,  Col } from 'react-bootstrap';
 import Tables from '../../components/Tables';
-// icons
-import { BiFilterAlt } from 'react-icons/bi';
-
 // data
 import { Suplierheader, SuplierRows } from '../../data.js';
 import FilterCard from '../../components/FilterCard';
 import Addخصم from '../../components/Addخصم';
+import Number from '../../atoms/Number';
+import Search from '../../atoms/Search';
+import Header from '../../atoms/Header';
+import Totals from '../../atoms/Totals';
 
 const خصم = () => {
   const [serach, setSearch] = useState(false);
@@ -16,23 +17,13 @@ const خصم = () => {
   return (
     <Container className="mt-3">
       <Row>
-        <p className="fs-5 fw-bold">سند الخصم</p>
+        <Header headLine={'سند الخصم'} />
         <Row>
           <div className="d-flex flex-sm-column flex-lg-row justify-content-between">
             <div className="d-flex gap-2">
-              <h4>مجموع السندات :</h4>
-              <Button variant="outline-light" size="md" className="buttonColor">
-                10
-              </Button>
-              <Button
-                variant="outline-light"
-                size="md"
-                className="bgColor"
-                onClick={() => setSearch(!serach)}
-              >
-                <BiFilterAlt />
-                بحث
-              </Button>
+              <Totals totalsLine={'مجموع السندات :'} />
+              <Number num={10} />
+              <Search setSearch={setSearch} serach={serach} />
             </div>
             <div className="d-flex gap-2">
               <Addخصم />

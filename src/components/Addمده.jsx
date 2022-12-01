@@ -36,7 +36,7 @@ const Addمده = () => {
               </label>
               <input
                 type="text"
-                className="form-control secbgColor"
+                className="form-control"
                 id="staticEmail2"
                 value=""
               />
@@ -274,7 +274,7 @@ const Addمده = () => {
                 />
                 <Button
                   style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
+                  className="border border-0 bgDarkYellow ms-2 rounded-start "
                 >
                   تغيير
                 </Button>
@@ -331,7 +331,7 @@ const Addمده = () => {
                 />
                 <Button
                   style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
+                  className="border border-0 bgDarkYellow ms-2 rounded-start "
                 >
                   تغيير
                 </Button>
@@ -381,7 +381,7 @@ const Addمده = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -400,7 +400,7 @@ const Addمده = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -430,7 +430,7 @@ const Addمده = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -449,7 +449,7 @@ const Addمده = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />

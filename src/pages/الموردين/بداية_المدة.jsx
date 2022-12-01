@@ -1,89 +1,41 @@
 import React, { useState } from 'react';
-import { Container, Row, Button, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Tables from '../../components/Tables';
-import { BiFilterAlt } from 'react-icons/bi';
+import FilterCard from '../../components/FilterCard';
+import Number from '../../atoms/Number';
+import Search from '../../atoms/Search';
+import AddingButton from '../../atoms/AddingButton';
 // data
 import { Suplierheader, SuplierRows } from '../../data.js';
-import FilterCard from '../../components/FilterCard';
-import { IoAddOutline } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
-
-const بداية_المدة = () =>
-{
+import Totals from '../../atoms/Totals';
+import Header from '../../atoms/Header';
+import ChangeRadio from '../../atoms/ChangeRadio';
+const بداية_المدة = () => {
   const [serach, setSearch] = useState(false);
-  
+
   return (
     <Container className="mt-3">
       <Row>
-        <p className="fs-5 fw-bold">سندات بداية المدة و زيادة الرصيد</p>
+        <Header headLine={'سندات بداية المدة و زيادة الرصيد'} />
         <Row>
           <div className="d-flex flex-sm-column flex-lg-row justify-content-between">
             <div className="d-flex gap-2">
-              <h4>مجموع السندات :</h4>
-              <Button variant="outline-light" size="md" className="buttonColor">
-                20
-              </Button>
-              <Button
-                variant="outline-light"
-                size="md"
-                className="bgColor"
-                onClick={() => setSearch(!serach)}
-              >
-                <BiFilterAlt />
-                بحث
-              </Button>
+              <Totals totalsLine={'مجموع السندات :'} />
+              <Number num={10} />
+              <Search setSearch={setSearch} serach={serach} />
             </div>
             <div className="d-flex gap-2">
-              <Button
-                variant="outline-light"
-                size="md"
-                className="secButtonColor"
-              >
-                <IoAddOutline className="ms-1" />
-                <Link className="" to="/Addمده">
-                  إضافة سند
-                </Link>
-              </Button>
+              <AddingButton link={'/Addمده'} linktitle={' إضافة سند'} />
             </div>
           </div>
-          <div class="d-flex gap-4 mt-2 ">
-            <p className="logoColor fw-bold">تغيير </p>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
-                checked
-              />
-              <label className="form-check-label" for="flexRadioDefault2">
-                الكل{' '}
-              </label>
-            </div>
-            <div class="form-check ">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
-              />
-              <label className="form-check-label" for="flexRadioDefault1">
-                بداية مدة
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
-                checked
-              />
-              <label className="form-check-label" for="flexRadioDefault2">
-                زيادة رصيد{' '}
-              </label>
-            </div>
-          </div>
+        </Row>
+        <Row>
+          <ChangeRadio
+            name={'تغيير'}
+            radio1={'الكل'}
+            radio2={'بداية مدة'}
+            radio3={'زيادة رصيد'}
+          />
         </Row>
       </Row>
       <div className="d-flex gap-4">

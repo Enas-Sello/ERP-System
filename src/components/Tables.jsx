@@ -11,11 +11,10 @@ function Tables({ Suplierheader, SuplierRows, edit }) {
       <Table className="my-4 rounded">
         <thead>
           <tr
-            style={{ backgroundColor: 'rgb(152 200 193)' }}
-            className=" rounded my-4 text-center fw-bold"
+            className=" bglightGreen rounded my-4 text-center fw-bold"
           >
             {Suplierheader.map((th) => (
-              <th key={th.id} className="text- center">
+              <th key={th.id} >
                 {th.header}
                 <BsArrowUpShort
                   className="text-light"

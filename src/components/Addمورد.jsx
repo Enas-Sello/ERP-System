@@ -51,16 +51,16 @@ const Addمورد = () => {
     <>
       <Button
         variant="outline-light"
-        className=" secButtonColor "
+        className=" bgDarkgreen "
         size="md"
         onClick={handleShow}
       >
-        <IoAddOutline className="text-light" />
+        <IoAddOutline className="text-dark" />
         إضافة مورد
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose} className="secbgColor ">
-        <Offcanvas.Body className="secbgColor ">
+      <Offcanvas show={show} onHide={handleClose} className="bglightGray ">
+        <Offcanvas.Body className="bglightGray ">
           {/* add from */}
           <div className="p-2 text-end rounded ">
             <div className="d-flex flex-column flex-lg-row align-items-center gap-2  p-2 ">
@@ -77,14 +77,11 @@ const Addمورد = () => {
                         <Button variant="danger">
                           <Link to="/المورد">العودة</Link>
                         </Button>{' '}
-                        <Button
-                          type="submit"
-                          variant="success"
-                        >
+                        <Button type="submit" variant="success">
                           حفظ{' '}
                         </Button>{' '}
                       </div>
-                      <p className="fs-2 fw-bolder logoColor ms-5 ">Altebr</p>
+                      <p className="fs-2 fw-bolder ms-5 ">Altebr</p>
                     </div>{' '}
                   </Offcanvas.Title>
                 </Offcanvas.Header>

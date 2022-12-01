@@ -321,7 +321,7 @@ const Addمردود_توريد = () =>
                 />
                 <Button
                   style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
+                  className="border border-0 bgDarkYellow ms-2 rounded-start "
                 >
                   تغيير
                 </Button>
@@ -378,7 +378,7 @@ const Addمردود_توريد = () =>
                 />
                 <Button
                   style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
+                  className="border border-0 bgDarkYellow ms-2 rounded-start "
                 >
                   تغيير
                 </Button>
@@ -428,7 +428,7 @@ const Addمردود_توريد = () =>
                   id="staticEmail2"
                   onChange={handelChang}
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -447,7 +447,7 @@ const Addمردود_توريد = () =>
                   id="staticEmail2"
                   onChange={handelChang}
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -477,7 +477,7 @@ const Addمردود_توريد = () =>
                   id="staticEmail2"
                   onChange={handelChang}
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -496,7 +496,7 @@ const Addمردود_توريد = () =>
                   id="staticEmail2"
                   onChange={handelChang}
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />

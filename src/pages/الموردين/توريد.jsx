@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Container, Row, Button, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Tables from '../../components/Tables';
-// icons
-import { BiFilterAlt } from 'react-icons/bi';
-
 // data
 import { Suplierheader, SuplierRows } from '../../data.js';
 import FilterCard from '../../components/FilterCard';
-import { Link } from 'react-router-dom';
-import { IoAddOutline } from 'react-icons/io5';
+import AddingButton from '../../atoms/AddingButton';
+import Search from '../../atoms/Search';
+import Number from '../../atoms/Number';
+import Totals from '../../atoms/Totals';
+import Header from '../../atoms/Header';
 
 const توريد = () => {
   const [serach, setSearch] = useState(false);
@@ -16,35 +16,16 @@ const توريد = () => {
   return (
     <Container className="mt-3">
       <Row>
-        <p className="fs-5 fw-bold">سند التوريد</p>
+        <Header headLine={'سند التوريد'} />
         <Row>
           <div className="d-flex flex-sm-column flex-lg-row justify-content-between">
             <div className="d-flex gap-2">
-              <h4> مجموع السندات</h4>
-              <Button variant="outline-light" size="md" className="buttonColor">
-                10
-              </Button>
-              <Button
-                variant="outline-light"
-                size="md"
-                className="bgColor"
-                onClick={() => setSearch(!serach)}
-              >
-                <BiFilterAlt />
-                بحث
-              </Button>
+              <Totals totalsLine={'مجموع السندات :'} />
+              <Number num={10} />
+              <Search setSearch={setSearch} serach={serach} />
             </div>
             <div className="d-flex gap-2">
-              <Button
-                variant="outline-light"
-                size="md"
-                className="secButtonColor"
-              >
-                <IoAddOutline className="ms-1" />
-                <Link className="" to="/Add_سند_توريد">
-                  إضافة سند
-                </Link>
-              </Button>
+              <AddingButton link={'/Add_سند_توريد'} linktitle={' إضافة سند'} />
             </div>
           </div>
         </Row>

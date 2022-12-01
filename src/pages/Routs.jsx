@@ -41,7 +41,7 @@ import Editخصم from '../components/Editخصم';
 // لوحة التحكم
 const Routs = () => {
   return (
-    <Container className="secbgColor " >
+    <Container className="bglightGray ">
       <Routes>
         {/* الاضافات */}
         <Route path="/بلد المنتج" element={<البلد />} />

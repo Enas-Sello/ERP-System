@@ -1,12 +1,13 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Header from '../../atoms/Header';
 import { images } from '../../data';
 
 const صور = () => {
   return (
     <Container className="my-3">
-      <p className="fs-5 fw-bold">صور</p>
+      <Header headLine={'صور'} />
       <div className="d-flex p-4 w-100 gap-3 align-items-center bg-white rounded">
         <div className="d-flex w-100  justify-content-between flex-column">
           <p>المدينة</p>

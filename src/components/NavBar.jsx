@@ -14,7 +14,7 @@ function NavBar() {
   return (
     <Navbar className="p-0" bg="light" expand="sm">
       <Container fluid>
-        <Navbar.Brand href="/" className="fs-2 fw-bolder logoColor ms-5 ">
+        <Navbar.Brand href="/" className="fs-2 fw-bolder ms-5 ">
           <img
             src={logo}
             style={{ width: '50px', height: '50px', objectFit: 'contain' }}
@@ -27,10 +27,10 @@ function NavBar() {
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2 ms-2 secbgColor"
+              className="me-2 ms-2 bglightGray"
               aria-label="Search"
             />
-            <Button variant="outline-light secbgColor sectextColor">
+            <Button variant="outline-light bglightGray textDarkOrang">
               <BiSearchAlt />
             </Button>
           </Form>

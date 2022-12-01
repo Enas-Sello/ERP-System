@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Container } from 'react-bootstrap';
+import Editbuttons from '../atoms/Editbuttons';
 
 const Editسداد = () => {
   return (
@@ -7,18 +8,7 @@ const Editسداد = () => {
       <div className="d-flex justify-content-between flex-column mb-4">
         <div className="d-flex  justify-content-between ">
           <p className="fs-5 fw-bold">إضافة سند السداد</p>
-          <div className="d-flex text-start">
-            <Button className="buttonColor border border-0 ms-2 ">
-              اعتماد
-            </Button>
-            <Button className="secButtonColor border border-0 ms-2 ">
-              القيود
-            </Button>
-            <Button className="secButtonColor border border-0 ms-2">
-              طباعة
-            </Button>{' '}
-            <Button className="border border-0 bg-danger ms-2">العودة</Button>
-          </div>
+          <Editbuttons />
         </div>
         <div class="d-flex gap-4 ">
           <p className="text-danger fw-bold"> إختار نوع العملية : </p>

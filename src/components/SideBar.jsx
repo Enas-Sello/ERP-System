@@ -21,7 +21,7 @@ const SideBar = () => {
       <Sidebar style={{ color: 'white' }} backgroundColor={'#295E57'}>
         <Menu className="p-3 position-relative">
           <button
-            className="position-absolute border secButtonColor border-0 text-white  top-0 end-0"
+            className="position-absolute border bgDarkgreen border-0 text-white  top-0 end-0"
             onClick={() => collapseSidebar()}
           >
             <CgMenuRight />
@@ -33,7 +33,7 @@ const SideBar = () => {
           {sidebar.map((sub) => (
             <SubMenu
               key={sub.id}
-              className=" fw-bold secButtonColor"
+              className=" fw-bold"
               label={sub.title}
               icon={<RiLayoutMasonryFill />}
             >
@@ -43,7 +43,7 @@ const SideBar = () => {
                   className={
                     selected === i && true
                       ? 'textDarkyellow fw-bold w-100'
-                      : 'text-white secButtonColor '
+                      : 'text-white bgDarkgreen fw-bold '
                   }
                   routerLink={<Link to={item.title} />}
                   key={item.i}

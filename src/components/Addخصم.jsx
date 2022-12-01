@@ -15,7 +15,7 @@ const Addخصم = () => {
     <>
       <Button
         variant="outline-light"
-        className=" secButtonColor "
+        className=" bgDarkgreen "
         size="sm"
         onClick={handleShow}
       >

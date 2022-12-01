@@ -22,7 +22,7 @@ const Add_سند_توريد = () => {
         </div>
         <div className="d-flex text-start">
           <Button
-            type='submit'
+            type="submit"
             className="bg-success border  border-0 ms-2 "
             onClick={() => setwarningPopUp(!warningPopUp)}
           >
@@ -304,7 +304,7 @@ const Add_سند_توريد = () => {
                 />
                 <Button
                   style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
+                  className="border border-0 bgDarkYellow ms-2 rounded-start "
                 >
                   تغيير
                 </Button>
@@ -354,14 +354,14 @@ const Add_سند_توريد = () => {
               <div className="d-flex align-items-center ">
                 <input
                   style={{ borderRadius: '0' }}
-                  className="form-control secbgColor rounded-end"
+                  className="form-control  rounded-end"
                   type="text"
                   id="staticEmail2"
                   value=""
                 />
                 <Button
                   style={{ borderRadius: '0', padding: '.45rem .75rem' }}
-                  className="border border-0 buttonColor ms-2 rounded-start "
+                  className="border border-0 bgDarkYellow ms-2 rounded-start "
                 >
                   تغيير
                 </Button>
@@ -411,7 +411,7 @@ const Add_سند_توريد = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -430,7 +430,7 @@ const Add_سند_توريد = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -460,7 +460,7 @@ const Add_سند_توريد = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -479,7 +479,7 @@ const Add_سند_توريد = () => {
                   id="staticEmail2"
                   value=""
                 />
-                <Button className="border border-0 buttonColor ms-2  ">
+                <Button className="border border-0 bgDarkYellow ms-2  ">
                   <div className="d-flex align-items-center gap-2 p-1 ">
                     <MdOutlineKeyboardArrowDown />
                     <MdOutlineKeyboardArrowUp />
@@ -550,8 +550,6 @@ const Add_سند_توريد = () => {
         </div>
         {/*end form2 */}
       </div>
-      
-      
     </Container>
   );
 };
