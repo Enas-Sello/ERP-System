@@ -18,7 +18,7 @@ const بداية_المدة = () => {
       <Row>
         <Header headLine={'سندات بداية المدة و زيادة الرصيد'} />
         <Row>
-          <div className="d-flex flex-sm-column flex-lg-row justify-content-between">
+          <div className="d-flex flex-column flex-lg-row justify-content-between">
             <div className="d-flex gap-2">
               <Totals totalsLine={'مجموع السندات :'} />
               <Number num={10} />

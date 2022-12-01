@@ -6,7 +6,7 @@ const Editالمده = () => {
   return (
     <Container className="my-3">
       <div className="d-flex justify-content-between flex-column mb-4">
-        <div className="d-flex  justify-content-between ">
+        <div className="d-flex justify-content-between flex-column flex-md-row">
           <p className="fs-5 fw-bold">بداية مدة و زيادة رصيد</p>
           <Editbuttons />
         </div>

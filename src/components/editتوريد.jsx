@@ -9,7 +9,7 @@ const Editتوريد = () => {
   return (
     <Container className="my-3">
       <div className="d-flex justify-content-between mb-4">
-        <div className="d-flex ">
+        <div className="d-flex flex-column flex-md-row ">
           <p className="fs-5 fw-bold">إضافة سند التوريد</p>
         </div>
         <div className="d-flex text-start">

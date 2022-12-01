@@ -8,7 +8,7 @@ const Editمردود_توريد = () => {
   return (
     <Container className="my-3">
       <div className="d-flex justify-content-between flex-column mb-4">
-        <div className="d-flex  justify-content-between ">
+        <div className="d-flex  justify-content-between flex-column flex-md-row">
           <p className="fs-5 fw-bold">إضافة سند السداد</p>
           <Editbuttons />
         </div>
