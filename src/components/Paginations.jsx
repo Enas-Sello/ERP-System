@@ -12,8 +12,13 @@ function AdvancedExample() {
             معاينة
           </Link>
         </li>
-        <li className="page-item ">
-          <Link className="page-link bgDarkgreen text-white rounded" href="#">
+        <li
+          className="page-item d-flex align-items-center justify-content-center align-content-center"
+        >
+          <Link
+            className="page-link bgDarkgreen text-white rounded fw-bold  "
+            href="#"
+          >
             1
           </Link>
         </li>
