@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
@@ -9,19 +10,19 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Container fluid style={{ margin: '0', padding: '0', height: '100vh',display:'flex',flexDirection:'column', }}>
+    <div
+      className="d-flex flex-column parent"
+     
+    >
       <NavBar />
-      <main
-        className="d-flex w-100"
-        style={ { height: '100vh' } }
-      >
+      <main className="d-flex w-100">
         <SideBar />
         <Routes>
           <Route path="/*" element={<Routs />} />
         </Routes>
       </main>
       <Footer />
-    </Container>
+    </div>
   );
 }
 

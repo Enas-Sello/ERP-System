@@ -22,6 +22,7 @@ const Add_سند_توريد = () => {
         </div>
         <div className="d-flex text-start">
           <Button
+            type='submit'
             className="bg-success border  border-0 ms-2 "
             onClick={() => setwarningPopUp(!warningPopUp)}
           >
@@ -55,7 +56,6 @@ const Add_سند_توريد = () => {
           {/*  */}
         </div>
       </div>
-
       <div className="d-flex flex-column flex-lg-row">
         {/* form */}
         <div className="bg-white rounded mb-1  mx-4 p-2">
@@ -550,6 +550,8 @@ const Add_سند_توريد = () => {
         </div>
         {/*end form2 */}
       </div>
+      
+      
     </Container>
   );
 };

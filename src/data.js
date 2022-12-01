@@ -1,3 +1,5 @@
+import holder from './assets/holder.png';
+
 export const sidebar = [
   {
     id: '1',
@@ -17,8 +19,8 @@ export const sidebar = [
       { id: '11', title: 'اصناف الذهب' },
     ],
   },
-  { id: '2', title: 'الادارة', submenu: [{ id: '', title: '' }] },
-  { id: '3', title: 'الفروع', submenu: [{ id: '', title: '' }] },
+  { id: '23', title: 'الادارة', submenu: [{ id: '44', title: 'الادارة' }] },
+  { id: '32', title: 'الفروع', submenu: [{ id: '55', title: 'الفروع' }] },
   {
     id: '4',
     title: 'الموردين',
@@ -32,9 +34,17 @@ export const sidebar = [
       { id: '7', title: 'صور' },
     ],
   },
-  { id: '5', title: 'التجزئة', submenu: [{ id: '', title: '' }] },
-  { id: '6', title: 'التدقيق', submenu: [{ id: '', title: '' }] },
-  { id: '7', title: 'لوحة التحكم', submenu: [{ id: '', title: '' }] },
+  {
+    id: '5',
+    title: 'التجزئة',
+    submenu: [{ id: '66', title: 'التجزئة' }],
+  },
+  { id: '6', title: 'التدقيق', submenu: [{ id: '595', title: 'التدقيق' }] },
+  {
+    id: '7',
+    title: 'لوحة التحكم',
+    submenu: [{ id: '55', title: 'لوحة التحكم' }],
+  },
 ];
 
 export const Suplierheader = [
@@ -116,4 +126,15 @@ export const SuplierRows = [
     td4: '215461654',
     td5: '215461654',
   },
+];
+export const images = [
+  { id: '80vsa8', img: `${holder}` },
+  { id: '8g08', img: `${holder}` },
+  { id: '8a08', img: `${holder}` },
+  { id: '8f08', img: `${holder}` },
+  { id: 'dd', img: `${holder}` },
+  { id: '8v08', img: `${holder}` },
+  { id: '8vv08', img: `${holder}` },
+  { id: '86007', img: `${holder}` },
+  { id: '707', img: `${holder}` },
 ];

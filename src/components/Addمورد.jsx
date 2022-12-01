@@ -43,10 +43,10 @@ const Addمورد = () => {
 
   // send to back end
   const handelSubmit = (e) => {
+    e.preventDefault();
     //conect to api here
     console.log(detail);
   };
-  console.log(detail);
   return (
     <>
       <Button
@@ -60,32 +60,37 @@ const Addمورد = () => {
       </Button>
 
       <Offcanvas show={show} onHide={handleClose} className="secbgColor ">
-        <Offcanvas.Header>
-          <Offcanvas.Title className="bg-light p-2">
-            <div
-              style={{
-                width: '100%',
-              }}
-              className=" d-flex  justify-content-between p-1 align-items-center"
-            >
-              <div className="d-flex  justify-content-center align-items-center gap-2">
-                <Button variant="danger">
-                  <Link to="/المورد">العودة</Link>
-                </Button>{' '}
-                <Button type="submit" onSubmit={handelSubmit} variant="success">
-                  حفظ{' '}
-                </Button>{' '}
-              </div>
-              <p className="fs-2 fw-bolder logoColor ms-5 ">Altebr</p>
-            </div>
-          </Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body className="secbgColor ">
           {/* add from */}
-          <div className="bg-light p-2 text-end rounded ">
-            <p className="fs-5 fw-bold">إضافة مورد جديد</p>
-            <div className="d-flex flex-column flex-lg-row align-items-center gap-2  p-2">
-              <form onSubmit={handelSubmit} className="row g-2">
+          <div className="p-2 text-end rounded ">
+            <div className="d-flex flex-column flex-lg-row align-items-center gap-2  p-2 ">
+              <form onSubmit={handelSubmit} className="row g-2 ">
+                <Offcanvas.Header>
+                  <Offcanvas.Title className="bg-light rounded p-2">
+                    <div
+                      style={{
+                        width: '100%',
+                      }}
+                      className=" d-flex  justify-content-between p-1 align-items-center"
+                    >
+                      <div className="d-flex  justify-content-center align-items-center gap-2">
+                        <Button variant="danger">
+                          <Link to="/المورد">العودة</Link>
+                        </Button>{' '}
+                        <Button
+                          type="submit"
+                          variant="success"
+                        >
+                          حفظ{' '}
+                        </Button>{' '}
+                      </div>
+                      <p className="fs-2 fw-bolder logoColor ms-5 ">Altebr</p>
+                    </div>{' '}
+                  </Offcanvas.Title>
+                </Offcanvas.Header>
+                {/* <Offcanvas.Body className="bg-light"> */}
+
+                <p className="fs-5 fw-bold">إضافة مورد جديد</p>
                 <div className="col-6">
                   <label for="staticEmail2" className="form-label">
                     إسم المورد{' '}

@@ -1,7 +1,8 @@
 import React from 'react';
-import {  Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
-import holder from '../../assets/holder.png';
+import { images } from '../../data';
+
 const صور = () => {
   return (
     <Container className="my-3">
@@ -88,45 +89,24 @@ const صور = () => {
         <p className=" text-center">
           Filter options relating to pictures shown will be displayed here
         </p>
-        <div className="container">
-          <div
+        <Row>
+          {images.map((item) => (
+            <Col sm={6} md={4} lg={3}>
+              {' '}
+              <div className="mb-2">
+                <img src={item.img} width={'250px'} alt="" />
+              </div>
+            </Col>
+          ))}
+          {/* <div
             className="d-flex  flex-wrap w-100 "
             style={{ columnGap: '5px', rowGap: '20px' }}
           >
             <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
+              <img src={item.img} width={'250px'} alt="" />
             </div>
-            <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
-            </div>
-            <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
-            </div>
-            <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
-            </div>
-            <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
-            </div>
-            <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
-            </div>
-            <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
-            </div>
-            <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
-            </div>
-            <div className="col p-0">
-              <img src={holder} width={'250px'} alt="" />
-            </div>
-          </div>
-        </div>
-        {/* <Row>
-          <Card style={{ width: '15rem', border: 'none' }}>
-            <Card.Img variant="top" src={holder} />
-          </Card>
-        </Row> */}
+          </div> */}
+        </Row>
       </div>
     </Container>
   );

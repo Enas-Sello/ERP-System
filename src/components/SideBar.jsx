@@ -17,12 +17,8 @@ const SideBar = () => {
   console.log(selected);
   const { collapseSidebar } = useProSidebar();
   return (
-    <div className="d-flex  text-white">
-      <Sidebar
-        transitionDuration={'300'}
-        style={{ color: 'white' }}
-        backgroundColor={'#295E57'}
-      >
+    <div className="d-flex text-white">
+      <Sidebar style={{ color: 'white' }} backgroundColor={'#295E57'}>
         <Menu className="p-3 position-relative">
           <button
             className="position-absolute border secButtonColor border-0 text-white  top-0 end-0"
@@ -37,7 +33,7 @@ const SideBar = () => {
           {sidebar.map((sub) => (
             <SubMenu
               key={sub.id}
-              className="textDarkyellow fw-bold"
+              className=" fw-bold secButtonColor"
               label={sub.title}
               icon={<RiLayoutMasonryFill />}
             >
@@ -46,8 +42,8 @@ const SideBar = () => {
                   onClick={() => setSelected(i)}
                   className={
                     selected === i && true
-                      ? 'textColor fw-bold'
-                      : 'text-white secButtonColor fw-bold'
+                      ? 'textDarkyellow fw-bold w-100'
+                      : 'text-white secButtonColor '
                   }
                   routerLink={<Link to={item.title} />}
                   key={item.i}
