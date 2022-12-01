@@ -2,7 +2,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 import SideBar from './components/SideBar';
 import Routs from './pages/Routs';
 import NavBar from './components/NavBar';
