@@ -1,7 +1,7 @@
 /* global */
 :root {
   --darkgreen: #295e57;
-  --lightGreen:rgb(152 200 193);
+  --lightGreen: rgb(152 200 193);
   --lightYellow: #db8;
   --darkYellow: #db8027;
   --darkOrang: #6a3c2c;
@@ -43,7 +43,9 @@ a {
 }
 /*end global */
 /* text color */
-.textDarkGreen{color: var(--darkgreen);}
+.textDarkGreen {
+  color: var(--darkgreen);
+}
 .textlightYellow {
   color: var(--lightYellow) !important ;
 }
@@ -60,7 +62,9 @@ a {
 .bglightGray {
   background-color: var(--lightGray) !important;
 }
-.bglightGreen {background-color:var(--lightGreen) ;}
+.bglightGreen {
+  background-color: var(--lightGreen);
+}
 .bgDarkYellow {
   background-color: var(--darkYellow) !important;
   outline: none;
@@ -71,10 +75,12 @@ a {
 /* input{background-color: var(--darkgray)!important;} */
 /* button color */
 
-.parent{
+.parent {
   min-height: 100vh;
 }
-main{flex: 1;}
+main {
+  flex: 1;
+}
 
 /* sideBar */
 .menu-item .active a {
@@ -103,3 +109,15 @@ main{flex: 1;}
   display: block !important;
   padding: 0 !important;
 }
+
+/* side bar */
+/* meue */
+.dyLfuo:hover {
+  background-color: #f3f3f3;
+}
+/* Submeue */
+.eVPmrC:hover {
+  background-color: #f3f3f3;
+}
+
+/* end side bar */
