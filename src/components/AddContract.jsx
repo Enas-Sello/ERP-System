@@ -1,36 +1,34 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { BsArrowLeftShort, BsFiles } from 'react-icons/bs';
+import { BsArrowRightShort, BsFiles } from 'react-icons/bs';
 import { IoIosCheckmark } from 'react-icons/io';
 import { BsPrinter } from 'react-icons/bs';
 import { VscFilePdf } from 'react-icons/vsc';
 import { SlFrame } from 'react-icons/sl';
 import { MdModeEditOutline } from 'react-icons/md';
 import { AiFillDelete } from 'react-icons/ai';
-import {} from 'react-icons/bs';
-
-const السندات = () => {
+const AddContract = () => {
   return (
     <Container className="mt-4 p-2">
       <div className="d-flex w-100 align-items-center justify-content-between">
         <h3>
           {' '}
-          انشاء سند <span className="text-muted">1/2</span>{' '}
+          انشاء سند <span className="text-muted">2/2</span>{' '}
         </h3>
         <Link
-          to="/"
-          className="d-flex bgDarkgreen rounded text-white align-items-center"
+          to="/Contract"
+          className="d-flex bgLight rounded textDarkGreen border borderColor  align-items-center"
         >
-          <Button className="text-white" variant="">
-            التالي{' '}
+          <BsArrowRightShort style={{ width: '25px', height: '25px' }} />
+          <Button className="textDarkGreen" variant="">
+            السابق{' '}
           </Button>
-          <BsArrowLeftShort style={{ width: '25px', height: '25px' }} />
         </Link>
       </div>
-      <Row className="bglightGray mt-3">
+      <Row className="bglightGray mt-3 ">
         <Col lg={6} sm={12}>
-          <div className="bgdarktGray w-100 h-100 rounded p-3">
+          <div className="bgdarktGray w-100 h-100 borderRadius p-3">
             <Form className="mt-3">
               <div className="d-flex justify-content-between mb-4">
                 <div className="d-flex align-items-center gap-1">
@@ -47,17 +45,12 @@ const السندات = () => {
                   </Button>
                 </div>
               </div>
-              <Row className="mb-3">
-                <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Label>تاريخ السند </Form.Label>
-                  <Form.Control type="date" placeholder="Enter email" />
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Label>تاريخ التسجيل</Form.Label>
-                  <Form.Control type="date" placeholder="Password" />
-                </Form.Group>
-              </Row>
+              <Form.Group className="mb-3 " controlId="formGridAddress1">
+                <Form.Label>ارفاق سند المورد</Form.Label>
+                <div className="bgLight boderDsh">
+                  <Form.Control className="bgLight border-0 p-2" type="file" />
+                </div>
+              </Form.Group>
               <Row className="mb-3">
                 <Form.Group
                   as={Col}
@@ -188,7 +181,7 @@ const السندات = () => {
           </div>
         </Col>
         <Col lg={6} sm={12}>
-          <div className="bg-light w-100 h-100 rounded p-3">
+          <div className="bgLight  w-100 h-100 borderRadius p-3">
             <div className="d-flex justify-content-between">
               <div className="fw-bold">معاينه</div>
               <div className="d-flex gap-2 textDarkyellow">
@@ -197,9 +190,9 @@ const السندات = () => {
                 <SlFrame style={{ width: '20px', height: '20px' }} />
               </div>
             </div>
-            <div className="bg-secondary bg-opacity-25 w-100 h-75 rounded mt-5">
+            <div className="bglightGray w-100 h-75 borderRadius mt-5">
               <div className=" p-4  ">
-                <div className="bg-secondary bg-opacity-10 rounded mt-5 d-flex p-2 ">
+                <div className=" bgdarktGray borderRadius mt-5 d-flex p-2 ">
                   <Col span="6">
                     <ul className="list-group list-group-flush ">
                       <li className="list-group-item">
@@ -237,11 +230,11 @@ const السندات = () => {
                 <div className="d-flex align-items-end justify-content-end">
                   <MdModeEditOutline
                     className="textDarkyellow"
-                    style={{ width: '25px', height: '25px' }}
+                    style={{ width: '16px', height: '16px' }}
                   />
                   <AiFillDelete
                     className="textDarkOrang"
-                    style={{ width: '25px', height: '25px' }}
+                    style={{ width: '16px', height: '16px' }}
                   />
                 </div>
               </div>
@@ -253,4 +246,4 @@ const السندات = () => {
   );
 };
 
-export default السندات;
+export default AddContract;

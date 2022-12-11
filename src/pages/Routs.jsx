@@ -16,7 +16,7 @@ import قطع_الاحجار from './الاضافات/قطع_الاحجار';
 import الوان_الاحجار from './الاضافات/الوان_الاحجار';
 import اسماء_الاحجار from './الاضافات/اسماء_الاحجار';
 // الادارة
-import السندات from './السندات/السندات';
+import Contractes from './السندات/Contractes';
 // الفروع
 // الموردين
 import بداية_المدة from './الموردين/بداية_المدة';
@@ -27,6 +27,7 @@ import مردود_توريد from './الموردين/مردود_توريد';
 import خصم from './الموردين/خصم';
 import صور from './الموردين/صور';
 // add
+
 import Add_سند_توريد from '../components/Add_سند_توريد';
 import Addسداد from '../components/Addسداد';
 import Addمده from '../components/Addمده';
@@ -37,6 +38,7 @@ import Editمردود_توريد from '../components/Editمردود_توريد';
 import Editالمده from '../components/Editالمده';
 import Editسداد from '../components/Editسداد';
 import Editخصم from '../components/Editخصم';
+import AddContract from '../components/AddContract';
 // التجزئة
 // التدقيق
 // لوحة التحكم
@@ -45,8 +47,10 @@ const Routs = () => {
     <Container className="bglightGray ">
       <Routes>
         {/* الاضافات */}
+        <Route path="/Add_Contract" element={<AddContract />} />
+        <Route path="/Contract" element={<Contractes />} />
+        <Route path="/مدينة " element={<المدينة />} />
         <Route path="/بلد المنتج" element={<البلد />} />
-        <Route path="/مدينة" element={<المدينة />} />
         <Route path="/سوق" element={<سوق />} />
         <Route path="/جنسيه" element={<جنسيه />} />
         <Route path="/المورد" element={<المورد />} />
@@ -58,7 +62,6 @@ const Routs = () => {
         <Route path="/الوان الاحجار" element={<الوان_الاحجار />} />
         <Route path="/اسماء الاحجار" element={<اسماء_الاحجار />} />
         {/* الادارة */}
-        <Route path="/السندات" element={<السندات />} />
         {/* الفروع */}
         {/* الموردين */}
         <Route path="/بداية المدة" element={<بداية_المدة />} />

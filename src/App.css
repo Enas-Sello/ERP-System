@@ -1,39 +1,39 @@
 /* global */
 :root {
   --darkgreen: #295e57;
-  --lightGreen: rgb(152 200 193);
-  --lightYellow: #db8;
-  --darkYellow: #db8027;
-  --darkOrang: #6a3c2c;
-  --lightGray: #eaecec;
-  --darkgray: #bbbebe;
-  --white: #ced1d1;
+  --lightgreen: #bececc;
+  --darkYellow: #db8028;
+  --darkOrang: #6b3c2d;
+  --lightGray: #f7fafa;
+  --darkgray: #e9eeed;
+  --white: #ffffff;
+  --radius: 22px;
 }
-
 * {
   font-family: 'Tajawal', sans-serif;
   font-size: 15px;
   transition-duration: 100ms;
 }
-
-.borderRadius {
-  border-radius: 18px !important ;
-}
 input {
   outline: none !important ;
 }
-
 a {
   text-decoration: none !important;
   color: inherit !important;
 }
 /*end global */
+.borderRadius {
+  border-radius: var(--radius) !important ;
+}
+.borderColor{
+  border-color: var(--darkgreen) !important;
+}
 /* text color */
 .textDarkGreen {
   color: var(--darkgreen);
 }
-.textlightYellow {
-  color: var(--lightYellow) !important ;
+.textlightgreen {
+  color: var(--lightgreen);
 }
 .textDarkyellow {
   color: var(--darkYellow) !important ;
@@ -41,10 +41,23 @@ a {
 .textDarkOrang {
   color: var(--darkOrang) !important ;
 }
+.textLightGray {
+  color: var(--lightGray) !important ;
+}
+.textDarkGray {
+  color: var(--darkgray) !important ;
+}
 .textwhite {
   color: var(--white) !important ;
 }
 /* background color*/
+.bgDarkgreen {
+  background-color: var(--darkgreen) !important;
+}
+.bgDarkYellow {
+  background-color: var(--darkYellow) !important;
+  outline: none;
+}
 .bgdarkOrang {
   background-color: var(--darkOrang) !important;
 }
@@ -54,18 +67,9 @@ a {
 .bgdarktGray {
   background-color: var(--darkgray) !important;
 }
-.bglightGreen {
-  background-color: var(--lightGreen);
+.bgLight {
+  background-color: var(--white) !important;
 }
-.bgDarkYellow {
-  background-color: var(--darkYellow) !important;
-  outline: none;
-}
-.bgDarkgreen {
-  background-color: var(--darkgreen) !important;
-}
-/* input{background-color: var(--darkgray)!important;} */
-/* button color */
 
 .parent {
   min-height: 100vh;
@@ -73,14 +77,21 @@ a {
 main {
   flex: 1;
 }
-
-/* sideBar */
-/* .menu-item .active a {
-  background-color: #4f555a !important;
-  color: var(--lightYellow) !important ;
-} */
-
-/* end sideBar */
+.boderDsh{
+  border: #bececc 1px dashed;
+}
+input[type=file]::file-selector-button {
+  margin-right: 50px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.form-control:focus {
+  box-shadow: none;
+}
 /* navebars */
 .images {
   width: 1.8rem !important ;
@@ -103,25 +114,20 @@ main {
 }
 
 /* sidebar */
-/* meue */
 .dyLfuo:hover {
-  color: #f3f3f3 !important;
-  border-radius: 18px;
+  /* color: #f3f3f3 !important; */
+  border-radius: var(--radius) !important ;
 }
-/* Submeue */
-/* .eVPmrC:hover {
-  color: #f3f3f3 !important;
-  background-color: var(--darkgreen) !important;
-  border-radius: 18px;
-} */
 .lkTtqM:hover {
   background-color: transparent !important;
-  border-radius: 18px;
+  border-radius: var(--radius) !important ;
 }
-/* end side bar */
-.form-control:focus {
-  box-shadow: none;
+.eVPmrC:hover {
+  background-color: transparent !important;
+  border-radius: var(--radius) !important ;
+
 }
+/* endside bar */
 .list-group-item {
   background-color: transparent !important;
   position: relative;
@@ -140,4 +146,7 @@ main {
   border-radius: 50%;
   top: 15px;
   right: 0;
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    border-color:transparent !important;
 }

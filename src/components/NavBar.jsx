@@ -14,7 +14,7 @@ import logo from '../assets/INVOICE_logo.png';
 
 function NavBar() {
   return (
-    <Navbar className="p-0" bg="light" expand="sm">
+    <Navbar className="p-0"  expand="sm">
       <Container fluid>
         <Navbar.Brand href="/" className="fs-2 fw-bolder ms-5 ">
           <img

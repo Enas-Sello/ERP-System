@@ -34,7 +34,7 @@ const SideBar = () => {
   //     };
   //   }, [window.innerWidth]);
   const [toggle, setToggle] = useState(false);
-
+console.log(sidebar);
   return (
     <div className=" d-flex text-white">
       <Sidebar
@@ -50,13 +50,12 @@ const SideBar = () => {
           >
             <CgMenuRight />
           </button> */}
-
           {sidebar.map((sub) => (
             <SubMenu
               key={sub.id}
-              className="textwhite fw-bold"
+              className="textlightgreen fw-bold"
               label={sub.title}
-              icon={<sub.icon />}
+              icon={<sub.icon style={{ width: '20px', height: '20px' }} />}
             >
               {sub.submenu.map((item, i) => (
                 <MenuItem
@@ -64,10 +63,10 @@ const SideBar = () => {
                   className={
                     selected === i
                       ? 'text-white bgDarkgreen borderRadius fw-bold w-100'
-                      : 'textwhite fw-bold '
+                      : ' fw-bold '
                   }
-                  routerLink={<Link to={item.title} />}
-                  key={item.i}
+                  routerLink={<Link to={item.Link} />}
+                  key={item.id}
                 >
                   <h6>{item.title}</h6>
                 </MenuItem>
