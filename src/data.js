@@ -1,9 +1,17 @@
 import holder from './assets/holder.png';
-
+import { BiHomeAlt } from 'react-icons/bi';
+import { BsFiles } from 'react-icons/bs';
+import { TfiBag } from 'react-icons/tfi';
+import { AiOutlineCloudUpload, AiOutlineControl } from 'react-icons/ai';
+import { MdOutlineSettingsSuggest } from 'react-icons/md';
+import { GiHomeGarage } from 'react-icons/gi';
+import { BsPeople } from 'react-icons/bs';
+import { BiSearch } from 'react-icons/bi';
 export const sidebar = [
   {
     id: '1',
-    title: 'الاضافات',
+    title: 'الرئيسيه',
+    icon: BiHomeAlt,
     submenu: [
       { id: '1', title: 'بلد المنتج' },
       { id: '2', title: 'مدينة' },
@@ -19,11 +27,24 @@ export const sidebar = [
       { id: '11', title: 'اصناف الذهب' },
     ],
   },
-  { id: '23', title: 'الادارة', submenu: [{ id: '44', title: 'الادارة' }] },
-  { id: '32', title: 'الفروع', submenu: [{ id: '55', title: 'الفروع' }] },
+  {
+    id: '23',
+    title: 'السندات',
+    icon: BsFiles,
+    submenu: [{ id: '44', title: 'السندات' }],
+  },
+  {
+    id: '32',
+    title: 'العملاء',
+    icon: TfiBag,
+    Link: '',
+    submenu: [{ id: '55', title: 'الفروع' }],
+  },
   {
     id: '4',
-    title: 'الموردين',
+    title: 'الاضافات',
+    icon: AiOutlineCloudUpload,
+    Link: '',
     submenu: [
       { id: '1', title: 'بداية المدة' },
       { id: '2', title: 'توريد' },
@@ -36,13 +57,44 @@ export const sidebar = [
   },
   {
     id: '5',
-    title: 'التجزئة',
+    title: 'الاداره',
+    icon: MdOutlineSettingsSuggest,
+    Link: '',
     submenu: [{ id: '66', title: 'التجزئة' }],
   },
-  { id: '6', title: 'التدقيق', submenu: [{ id: '595', title: 'التدقيق' }] },
+  {
+    id: '6',
+    title: 'الفروع',
+    icon: GiHomeGarage,
+    Link: '',
+    submenu: [{ id: '595', title: 'التدقيق' }],
+  },
   {
     id: '7',
-    title: 'لوحة التحكم',
+    title: 'الموردين ',
+    icon: BsPeople,
+    Link: '',
+    submenu: [{ id: '55', title: 'لوحة التحكم' }],
+  },
+  {
+    id: '7',
+    title: 'التدقيق ',
+    icon: BiSearch,
+    Link: '',
+    submenu: [{ id: '55', title: 'لوحة التحكم' }],
+  },
+  {
+    id: '7',
+    title: 'عملاء النتجزئه ',
+    icon: TfiBag,
+    Link: '',
+    submenu: [{ id: '55', title: 'لوحة التحكم' }],
+  },
+  {
+    id: '7',
+    title: 'لوحه التحكم ',
+    icon: AiOutlineControl,
+    Link: '',
     submenu: [{ id: '55', title: 'لوحة التحكم' }],
   },
 ];

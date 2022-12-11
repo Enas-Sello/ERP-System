@@ -6,6 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 // icons
 import { BiSearchAlt } from 'react-icons/bi';
 import { IoIosArrowDown, IoMdNotificationsOutline } from 'react-icons/io';
+import { MdOutlineSettingsSuggest } from 'react-icons/md';
+
 // assets
 import placeholder from '../assets/placeholder.jpg';
 import logo from '../assets/INVOICE_logo.png';
@@ -23,14 +25,14 @@ function NavBar() {
         </Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
         <Navbar.Collapse id="navbarScroll">
-          <Form className="d-flex">
+          <Form className="d-flex border border-1 bg-light rounded">
             <Form.Control
               type="search"
-              placeholder="Search"
-              className="me-2 ms-2 bglightGray"
+              placeholder="بحث"
+              className="me-2 ms-2 border-0 bg-transparent"
               aria-label="Search"
             />
-            <Button variant="outline-light bglightGray textDarkOrang">
+            <Button variant=" ">
               <BiSearchAlt />
             </Button>
           </Form>
@@ -40,14 +42,21 @@ function NavBar() {
             navbarScroll
           >
             <Nav.Link href="#action1" className="">
-              <h6>البلد</h6>
+              <MdOutlineSettingsSuggest
+                className="textDarkyellow"
+                style={{ width: '25px', height: '25px' }}
+              />
             </Nav.Link>
             <Nav.Link href="#action2">
               <div className=" position-relative">
                 <IoMdNotificationsOutline
-                  style={{ width: '25px', height: '25px' }}
+                  className="textDarkyellow"
+                  style={{ width: '28px', height: '28px' }}
                 />
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span
+                  className="position-absolute  translate-middle badge rounded-pill bgDarkYellow"
+                  style={{ top: '6px', left: '85%',fontSize:'10px' }}
+                >
                   10
                 </span>
               </div>

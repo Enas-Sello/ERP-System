@@ -6,37 +6,23 @@
   --darkYellow: #db8027;
   --darkOrang: #6a3c2c;
   --lightGray: #eaecec;
-  --darkgray: #545555;
+  --darkgray: #bbbebe;
+  --white: #ced1d1;
 }
 
 * {
   font-family: 'Tajawal', sans-serif;
   font-size: 15px;
   transition-duration: 100ms;
-  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
-/* hover */
-button:hover {
-  color: rgb(27, 27, 27) !important;
-  transform: scale(1.1) !important ;
-}
-a:hover {
-  color: var(--darkYellow) !important ;
-}
-.menu-item a:hover {
-  color: var(--darkYellow) !important ;
-  /* transform: scale(1.1) !important ; */
-  font-weight: 600;
-}
+
 .borderRadius {
-  border-radius: 14px !important ;
+  border-radius: 18px !important ;
 }
 input {
   outline: none !important ;
 }
-input:focus {
-  outline: var(--mainColor) !important;
-}
+
 a {
   text-decoration: none !important;
   color: inherit !important;
@@ -55,12 +41,18 @@ a {
 .textDarkOrang {
   color: var(--darkOrang) !important ;
 }
+.textwhite {
+  color: var(--white) !important ;
+}
 /* background color*/
 .bgdarkOrang {
   background-color: var(--darkOrang) !important;
 }
 .bglightGray {
   background-color: var(--lightGray) !important;
+}
+.bgdarktGray {
+  background-color: var(--darkgray) !important;
 }
 .bglightGreen {
   background-color: var(--lightGreen);
@@ -83,10 +75,10 @@ main {
 }
 
 /* sideBar */
-.menu-item .active a {
+/* .menu-item .active a {
   background-color: #4f555a !important;
   color: var(--lightYellow) !important ;
-}
+} */
 
 /* end sideBar */
 /* navebars */
@@ -110,14 +102,42 @@ main {
   padding: 0 !important;
 }
 
-/* side bar */
+/* sidebar */
 /* meue */
 .dyLfuo:hover {
-  background-color: #f3f3f3;
+  color: #f3f3f3 !important;
+  border-radius: 18px;
 }
 /* Submeue */
-.eVPmrC:hover {
-  background-color: #f3f3f3;
+/* .eVPmrC:hover {
+  color: #f3f3f3 !important;
+  background-color: var(--darkgreen) !important;
+  border-radius: 18px;
+} */
+.lkTtqM:hover {
+  background-color: transparent !important;
+  border-radius: 18px;
 }
-
 /* end side bar */
+.form-control:focus {
+  box-shadow: none;
+}
+.list-group-item {
+  background-color: transparent !important;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 10px;
+  font-weight: 500;
+}
+.list-group-item::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--darkgreen);
+  border-radius: 50%;
+  top: 15px;
+  right: 0;
+}
