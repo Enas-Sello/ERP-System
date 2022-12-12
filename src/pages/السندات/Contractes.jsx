@@ -187,9 +187,9 @@ const Contractes = () => {
             </Form>
           </div>
         </Col>
-        <Col lg={6} sm={12}>
+        <Col lg={6} sm={12} className="mt-4 mt-md-0">
           <div className="bgLight  w-100 h-100 borderRadius p-3">
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between mb-5 mb-md-3">
               <div className="fw-bold">معاينه</div>
               <div className="d-flex gap-2 textDarkyellow">
                 <BsPrinter style={{ width: '20px', height: '20px' }} />
@@ -197,43 +197,37 @@ const Contractes = () => {
                 <SlFrame style={{ width: '20px', height: '20px' }} />
               </div>
             </div>
-            <div className="bglightGray w-100 h-75 borderRadius mt-5">
-              <div className=" p-4  ">
-                <div className=" bgdarktGray borderRadius mt-5 d-flex p-2 ">
-                  <Col span="6">
-                    <ul className="list-group list-group-flush ">
-                      <li className="list-group-item">
-                        تاريخ السند : 22/2/2202
-                      </li>
-                      <li className="list-group-item">
-                        تاريخ التسجيل :22/2/2202
-                      </li>
-                      <li className="list-group-item">
-                        تاريخ التسجيل :22/2/2202
-                      </li>
-                      <li className="list-group-item">الملاحظات :لا يوجد</li>
-                      <li className="list-group-item">سعر الذهب :211 ر.س</li>
-                      <li className="list-group-item">
-                        رقم السند المرفق : 32313
-                      </li>
-                    </ul>
-                  </Col>
-                  <Col span="6">
-                    {' '}
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item">
-                        اسم المورد : اسم المورد
-                      </li>
-                      <li className="list-group-item">اسم المشتري : الاسم</li>
-                      <li className="list-group-item">
-                        اجمالي الاجور : 21521 ر.س
-                      </li>
-                      <li className="list-group-item">سعر الاسهم :21521 ر.س</li>
-                      <li className="list-group-item">الضريبه : 21521 ر.س</li>
-                      <li className="list-group-item">وزن الالماس 21521</li>
-                    </ul>
-                  </Col>
-                </div>
+            <div className="bglightGray w-100 h-75 borderRadius d-flex align-items-center justify-content-center ">
+              <div className=" bgdarktGray borderRadius d-flex p-2 d-flex  ">
+                <Col span="6">
+                  <ul className="list-group list-group-flush ">
+                    <li className="list-group-item">تاريخ السند : 22/2/2202</li>
+                    <li className="list-group-item">
+                      تاريخ التسجيل :22/2/2202
+                    </li>
+                    <li className="list-group-item">
+                      تاريخ التسجيل :22/2/2202
+                    </li>
+                    <li className="list-group-item">الملاحظات :لا يوجد</li>
+                    <li className="list-group-item">سعر الذهب :211 ر.س</li>
+                    <li className="list-group-item">
+                      رقم السند المرفق : 32313
+                    </li>
+                  </ul>
+                </Col>
+                <Col span="6">
+                  {' '}
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item">اسم المورد : اسم المورد</li>
+                    <li className="list-group-item">اسم المشتري : الاسم</li>
+                    <li className="list-group-item">
+                      اجمالي الاجور : 21521 ر.س
+                    </li>
+                    <li className="list-group-item">سعر الاسهم :21521 ر.س</li>
+                    <li className="list-group-item">الضريبه : 21521 ر.س</li>
+                    <li className="list-group-item">وزن الالماس 21521</li>
+                  </ul>
+                </Col>
                 <div className="d-flex align-items-end justify-content-end">
                   <MdModeEditOutline
                     className="textDarkyellow"
@@ -246,6 +240,14 @@ const Contractes = () => {
                 </div>
               </div>
             </div>
+            {/* <div className="d-flex align-items-end justify-content-end">
+              <Button className="bgDarkgreen rounded text-white" variant="">
+                <Link to="/AddContract" className=" text-white">
+                  تاكيد{' '}
+                  <BsArrowLeftShort style={{ width: '25px', height: '25px' }} />
+                </Link>
+              </Button>
+            </div> */}
           </div>
         </Col>
       </Row>

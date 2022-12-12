@@ -39,6 +39,7 @@ import Editالمده from '../components/Editالمده';
 import Editسداد from '../components/Editسداد';
 import Editخصم from '../components/Editخصم';
 import AddContract from '../components/AddContract';
+import ContractTable from './السندات/ContractTable';
 // التجزئة
 // التدقيق
 // لوحة التحكم
@@ -49,6 +50,7 @@ const Routs = () => {
         {/* الاضافات */}
         <Route path="/Add_Contract" element={<AddContract />} />
         <Route path="/Contract" element={<Contractes />} />
+        <Route path="/ContractTable" element={<ContractTable />} />
         <Route path="/مدينة " element={<المدينة />} />
         <Route path="/بلد المنتج" element={<البلد />} />
         <Route path="/سوق" element={<سوق />} />

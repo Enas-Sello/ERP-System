@@ -1,5 +1,6 @@
 /* global */
 :root {
+  --green: '#93aeaa';
   --darkgreen: #295e57;
   --lightgreen: #bececc;
   --darkYellow: #db8028;
@@ -8,6 +9,7 @@
   --darkgray: #e9eeed;
   --white: #ffffff;
   --radius: 22px;
+  --gray: '#BECECC';
 }
 * {
   font-family: 'Tajawal', sans-serif;
@@ -16,6 +18,7 @@
 }
 input {
   outline: none !important ;
+  border: var(--gray);
 }
 a {
   text-decoration: none !important;
@@ -25,7 +28,7 @@ a {
 .borderRadius {
   border-radius: var(--radius) !important ;
 }
-.borderColor{
+.borderColor {
   border-color: var(--darkgreen) !important;
 }
 /* text color */
@@ -50,9 +53,18 @@ a {
 .textwhite {
   color: var(--white) !important ;
 }
+.textGray {
+  color: var(--gray) !important ;
+}
+.textGreen {
+  color: var(--gray) !important ;
+}
 /* background color*/
 .bgDarkgreen {
   background-color: var(--darkgreen) !important;
+}
+.bgGreen {
+  background-color: #93aeaa !important;
 }
 .bgDarkYellow {
   background-color: var(--darkYellow) !important;
@@ -77,18 +89,10 @@ a {
 main {
   flex: 1;
 }
-.boderDsh{
+.boderDsh {
   border: #bececc 1px dashed;
 }
-input[type=file]::file-selector-button {
-  margin-right: 50px;
-  border: none;
-  background: #084cdf;
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
-}
+
 .form-control:focus {
   box-shadow: none;
 }
@@ -125,7 +129,6 @@ input[type=file]::file-selector-button {
 .eVPmrC:hover {
   background-color: transparent !important;
   border-radius: var(--radius) !important ;
-
 }
 /* endside bar */
 .list-group-item {
@@ -147,6 +150,56 @@ input[type=file]::file-selector-button {
   top: 15px;
   right: 0;
 }
-.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
-    border-color:transparent !important;
+
+/* table */
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  border-color: transparent !important;
+}
+.css-zylse7-MuiButtonBase-root-MuiIconButton-root {
+  transform: rotate(180deg);
+}
+.css-1mxz8qt-MuiPaper-root {
+  background-color: transparent !important ;
+  box-shadow: none !important ;
+  /* box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%); */
+}
+.css-1psng7p-MuiTablePagination-spacer {
+  display: none !important;
+}
+.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar p {
+  margin: 0 !important;
+}
+.css-1whpjm6-MuiToolbar-root {
+  background-color: transparent !important;
+}
+.css-16c50h-MuiInputBase-root-MuiTablePagination-select {
+  margin-right: 0px !important;
+}
+.css-pdct74-MuiTablePagination-selectLabel {
+  display: none !important;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: white !important;
+  border-width: 8px 0 0 0 !important;
+}
+tr {
+  border-radius: 50px !important;
+}
+input[type='checkbox']:checked{
+  background-color: var(--green) !important;
+  color: var(--green) !important;
 }
