@@ -199,7 +199,15 @@ tr {
 tr {
   border-radius: 50px !important;
 }
-input[type='checkbox']:checked{
+input[type='checkbox']:checked {
   background-color: var(--green) !important;
   color: var(--green) !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: var(--lightgreen) !important;
+}
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root:hover {
+  background-color: transparent !important;
 }
