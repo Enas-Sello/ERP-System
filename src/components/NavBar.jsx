@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 // icons
 import { BiSearchAlt } from 'react-icons/bi';
 import { IoIosArrowDown, IoMdNotificationsOutline } from 'react-icons/io';
-import { MdOutlineSettingsSuggest } from 'react-icons/md';
+import { IoSettingsOutline } from 'react-icons/io5';
 
 // assets
 import placeholder from '../assets/placeholder.jpg';
@@ -14,7 +14,7 @@ import logo from '../assets/INVOICE_logo.png';
 
 function NavBar() {
   return (
-    <Navbar className="p-0"  expand="sm">
+    <Navbar className="p-0" expand="sm">
       <Container fluid>
         <Navbar.Brand href="/" className="fs-2 fw-bolder ms-5 ">
           <img
@@ -42,7 +42,7 @@ function NavBar() {
             navbarScroll
           >
             <Nav.Link href="#action1" className="">
-              <MdOutlineSettingsSuggest
+              <IoSettingsOutline
                 className="textDarkyellow"
                 style={{ width: '25px', height: '25px' }}
               />
@@ -51,11 +51,11 @@ function NavBar() {
               <div className=" position-relative">
                 <IoMdNotificationsOutline
                   className="textDarkyellow"
-                  style={{ width: '28px', height: '28px' }}
+                  style={{ width: '25px', height: '25px' }}
                 />
                 <span
                   className="position-absolute  translate-middle badge rounded-pill bgDarkYellow"
-                  style={{ top: '6px', left: '85%',fontSize:'10px' }}
+                  style={{ top: '6px', left: '85%', fontSize: '10px' }}
                 >
                   10
                 </span>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Container } from 'react-bootstrap';
-// icons
 import { SlFrame } from 'react-icons/sl';
 import { BsArrowLeftShort, BsPrinter } from 'react-icons/bs';
 import { TfiBackRight } from 'react-icons/tfi';

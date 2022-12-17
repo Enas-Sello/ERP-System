@@ -14,7 +14,8 @@
 * {
   font-family: 'Tajawal', sans-serif;
   font-size: 15px;
-  transition-duration: 100ms;
+  transition-duration: 200ms;
+text-transform: capitalize;
 }
 input {
   outline: none !important ;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BsArrowLeftShort, BsFiles } from 'react-icons/bs';
-import { IoIosCheckmark } from 'react-icons/io';
+import { IoIosCheckmark, IoMdCheckmarkCircleOutline } from 'react-icons/io';
 import { BsPrinter } from 'react-icons/bs';
 import { VscFilePdf } from 'react-icons/vsc';
 import { SlFrame } from 'react-icons/sl';
@@ -37,14 +37,16 @@ const Contractes = () => {
                   <BsFiles className="textDarkyellow" />
                   <div className="fw-bold">تفاصيل السند</div>
                 </div>
-                <div className="d-flex align-items-center gap-1">
-                  <Button
+                <div className="d-flex align-items-center gap-1 ">
+                  {/* <Button
                     className="bgDarkgreen border-0 "
                     size="sm"
                     type="submit"
                   >
                     حفظ
-                  </Button>
+                  </Button> */}
+                  <IoMdCheckmarkCircleOutline className="textDarkGreen" />
+                  <p className="p-0 m-0 textDarkGreen">مكتمل</p>
                 </div>
               </div>
               <Row className="mb-3">

@@ -7,7 +7,7 @@ import {
   BsFileImage,
   BsFiles,
 } from 'react-icons/bs';
-import { IoIosCheckmark } from 'react-icons/io';
+import { IoIosCheckmark, IoMdCheckmarkCircleOutline } from 'react-icons/io';
 import { BsPrinter } from 'react-icons/bs';
 import { VscFilePdf } from 'react-icons/vsc';
 import { SlFrame } from 'react-icons/sl';
@@ -40,14 +40,16 @@ const AddContract = () => {
                   <BsFiles className="textDarkyellow" />
                   <div className="fw-bold">تفاصيل السند</div>
                 </div>
-                <div className="d-flex align-items-center gap-1">
-                  <Button
+                <div className="d-flex align-items-center gap-1 ">
+                  {/* <Button
                     className="bgDarkgreen border-0 "
                     size="sm"
                     type="submit"
                   >
                     حفظ
-                  </Button>
+                  </Button> */}
+                  <IoMdCheckmarkCircleOutline className="textDarkGreen" />
+                  <p className="p-0 m-0 textDarkGreen">مكتمل</p>
                 </div>
               </div>
               <Form.Group className="mb-3 " controlId="formGridAddress1">

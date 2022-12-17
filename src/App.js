@@ -9,10 +9,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div
-      className="d-flex flex-column parent"
-     
-    >
+    <div className="d-flex flex-column parent">
       <NavBar />
       <main className="d-flex w-100">
         <SideBar />
