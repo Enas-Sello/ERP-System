@@ -31,11 +31,12 @@ const SideBar = () => {
                   onClick={() => setSelected(i)}
                   className={
                     selected === i
-                      ? 'text-white bgDarkgreen borderRadius fw-bold w-100'
+                      ? 'text-white bgDarkgreen rounded-4 fw-bold w-100'
                       : ' fw-bold '
                   }
                   routerLink={<Link to={item.Link} />}
                   key={item.id}
+                  icon={<sub.icon style={{ width: '20px', height: '20px' }} />}
                 >
                   <h6>{item.title}</h6>
                 </MenuItem>

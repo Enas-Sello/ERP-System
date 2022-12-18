@@ -19,31 +19,109 @@ import Tooltip from '@mui/material/Tooltip';
 import { visuallyHidden } from '@mui/utils';
 import { AiFillDelete } from 'react-icons/ai';
 import { IoFilter } from 'react-icons/io5';
-function createData(name, calories, fat, carbs, protein) {
+function createData(
+  code,
+  category,
+  type,
+  weight,
+  caliber,
+  share,
+  payment,
+  totalPayment
+) {
   return {
-    name,
-    calories,
-    fat,
-    carbs,
-    protein,
+    code,
+    category,
+    type,
+    weight,
+    caliber,
+    share,
+    payment,
+    totalPayment,
   };
 }
 const rows = [
-  createData('ذهب', 215461654, 215461654, 215461654, 215461654),
-  createData('الماس', 215461654, 215461654, 215461654, 215461654),
-  createData('ذهب', 215461654, 215461654, 215461654, 215461654),
-  createData('Frozen yoghurt', 215461654, 215461654, 215461654, 215461654),
-  createData('الماس', 215461654, 215461654, 215461654, 215461654),
-  createData('ذهب', 215461654, 215461654, 215461654, 215461654),
-  createData('Ice cream sandwich', 215461654, 215461654, 215461654, 215461654),
-  createData('Jelly Bean', 215461654, 215461654, 215461654, 215461654),
-  createData('الماس', 215461654, 215461654, 215461654, 215461654),
-  createData('ذهب', 215461654, 215461654, 215461654, 215461654),
-  createData('Marshmallow', 215461654, 215461654, 215461654, 215461654),
-  createData('الماس', 360, 215461654, 215461654, 215461654, 215461654),
-  createData('Oreo', 437, 215461654, 215461654, 215461654, 215461654),
+  createData(
+    '565502',
+    'خاتم ',
+    'ذهب',
+    '85 جم',
+    '21',
+    '5',
+    '555 ر.س',
+    '5555 ر.س'
+  ),
+  createData(
+    '565502',
+    'خاتم ',
+    'ذهب',
+    '85 جم',
+    '21',
+    '5',
+    '555 ر.س',
+    '5555 ر.س'
+  ),
+  createData(
+    '565502',
+    'خاتم ',
+    'ذهب',
+    '85 جم',
+    '21',
+    '5',
+    '555 ر.س',
+    '5555 ر.س'
+  ),
 ];
-
+const headCells = [
+  {
+    id: 'code',
+    numeric: false,
+    disablePadding: true,
+    label: 'كود',
+  },
+  {
+    id: 'category',
+    numeric: true,
+    disablePadding: false,
+    label: 'الفئه',
+  },
+  {
+    id: 'type',
+    numeric: true,
+    disablePadding: false,
+    label: 'الصنف',
+  },
+  {
+    id: 'weight',
+    numeric: true,
+    disablePadding: false,
+    label: 'الوزن',
+  },
+  {
+    id: 'caliber',
+    numeric: true,
+    disablePadding: false,
+    label: 'العيار',
+  },
+  {
+    id: 'share',
+    numeric: true,
+    disablePadding: false,
+    label: 'الاسهم',
+  },
+  {
+    id: 'payment',
+    numeric: true,
+    disablePadding: false,
+    label: 'الاجور',
+  },
+  {
+    id: 'totalPayment',
+    numeric: true,
+    disablePadding: false,
+    label: ' اجمالي الاجور',
+  },
+];
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
@@ -73,39 +151,6 @@ function stableSort(array, comparator) {
   });
   return stabilizedThis.map((el) => el[0]);
 }
-
-const headCells = [
-  {
-    id: 'name',
-    numeric: false,
-    disablePadding: true,
-    label: 'Dessert (100g serving)',
-  },
-  {
-    id: 'calories',
-    numeric: true,
-    disablePadding: false,
-    label: 'Calories',
-  },
-  {
-    id: 'fat',
-    numeric: true,
-    disablePadding: false,
-    label: 'Fat (g)',
-  },
-  {
-    id: 'carbs',
-    numeric: true,
-    disablePadding: false,
-    label: 'Carbs (g)',
-  },
-  {
-    id: 'protein',
-    numeric: true,
-    disablePadding: false,
-    label: 'Protein (g)',
-  },
-];
 
 //header
 function EnhancedTableHead(props) {
@@ -194,7 +239,7 @@ function EnhancedTableToolbar(props) {
           variant="subtitle1"
           component="div"
         >
-          {numSelected} عدد  الخلايا المختاره
+          {numSelected} عدد الخلايا المختاره
         </Typography>
       ) : (
         <Typography
@@ -203,7 +248,7 @@ function EnhancedTableToolbar(props) {
           id="tableTitle"
           component="div"
         >
-          عدد  الخلايا
+          عدد الخلايا
         </Typography>
       )}
 
@@ -244,7 +289,7 @@ export default function MuiTable() {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelected = rows.map((n) => n.name);
+      const newSelected = rows.map((n) => n.code);
       setSelected(newSelected);
       return;
     }
@@ -279,11 +324,7 @@ export default function MuiTable() {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-
-  // const handleChangeDense = (event) => {
-  //   setDense(event.target.checked);
-  // };
-
+ 
   const isSelected = (name) => selected.indexOf(name) !== -1;
 
   // Avoid a layout jump when reaching the last page with empty rows.
@@ -325,7 +366,7 @@ export default function MuiTable() {
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
-                      key={row.name}
+                      key={row.code}
                       selected={isItemSelected}
                     >
                       <TableCell padding="checkbox">
@@ -343,12 +384,15 @@ export default function MuiTable() {
                         scope="row"
                         padding="none"
                       >
-                        {row.name}
+                        {row.code}
                       </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      <TableCell align="right">{row.protein}</TableCell>
+                      <TableCell align="right">{row.category}</TableCell>
+                      <TableCell align="right">{row.type}</TableCell>
+                      <TableCell align="right">{row.weight}</TableCell>
+                      <TableCell align="right">{row.caliber}</TableCell>
+                      <TableCell align="right">{row.share}</TableCell>
+                      <TableCell align="right">{row.payment}</TableCell>
+                      <TableCell align="right">{row.totalPayment}</TableCell>
                     </TableRow>
                   );
                 })}
@@ -364,8 +408,7 @@ export default function MuiTable() {
             </TableBody>
           </Table>
         </TableContainer>
-        <TablePagination
-          //  { value: number; label: string }
+        {/* <TablePagination
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
           count={rows.length}
@@ -373,12 +416,8 @@ export default function MuiTable() {
           page={page}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
-        />
+        /> */}
       </Paper>
-      {/* <FormControlLabel
-        control={<Switch checked={dense} onChange={handleChangeDense} />}
-        label="Dense padding"
-      /> */}
     </Box>
   );
 }

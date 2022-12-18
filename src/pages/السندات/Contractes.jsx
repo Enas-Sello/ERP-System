@@ -199,8 +199,8 @@ const Contractes = () => {
                 <SlFrame style={{ width: '20px', height: '20px' }} />
               </div>
             </div>
-            <div className="bglightGray w-100 h-75 borderRadius d-flex align-items-center justify-content-center ">
-              <div className=" bgdarktGray borderRadius d-flex p-2 d-flex  ">
+            <div className="bglightGray p-2 w-100 h-75 borderRadius d-flex align-items-center justify-content-center ">
+              <div className=" bgdarktGray   w-100 borderRadius d-flex p-2 d-flex  ">
                 <Col span="6">
                   <ul className="list-group list-group-flush ">
                     <li className="list-group-item">تاريخ السند : 22/2/2202</li>
